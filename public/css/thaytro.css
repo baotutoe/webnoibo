@@ -1,0 +1,107 @@
+
+.breadcrumb_background {
+    background-image: url('../images/bg_breadcrumb.jpg');
+     background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    float: left;
+    padding: 100px 0;
+}
+.awe-section_tt-4{
+margin-top: 10px;
+}
+.img_nen_tt{
+	margin-left: 70px;
+}
+.title_full .title_page {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    font-family: UTM Flavour,"Helvetica Neue",Helvetica,sans-serif;
+    color: #22c7d1;
+    margin: 0;
+    text-align: center;
+}
+
+.bg_collection{
+	background: #0e73c8;	
+	border-radius: 10% 10% 10% 10%;
+}
+.search > ul{
+	list-style: none;
+	padding-top: 1px;
+}
+.title_collec{
+	margin-left: 60px;
+}
+.dqdt-sidebar {
+	margin-right: 30px;
+}
+.search > ul li{
+	margin-top: 10px;
+}
+.li_menu_tk_tt-2{
+	width: 100px;
+	margin-left: 45px;
+	/*background: #ffffff;*/
+ }
+ .bt_timkiem{
+  	font-weight: bold;
+  	background: #ffffff;
+  	border: 1px solid black;
+  	/*height: 30px;*/
+  	margin-bottom: 5px;
+ }
+.img_sc-4{
+	width: 300px;
+	margin-left: -90px;
+}
+.main{
+	display: flex;
+}
+.right{
+	margin-top: 50px;
+	display: flex;
+	margin-left: 50px;
+	border-left: 1px solid black;
+}
+.img_right> img{
+	width: 300px;
+	border-radius: 10% 10% 10% 10%;
+}
+.face{
+	display: flex;
+}
+.face_c> img{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 50px;
+	border-radius: 50% 50% 50% 50%;
+}
+.face ul{
+	/*list-style: none;*/
+	padding-top: 10px;
+	font-weight: bold;
+	border-bottom: 1px solid black;
+}
+.nd{
+	margin-left: 20px;
+	border-bottom: 1px solid black;
+}
+.btn_tt > ul{
+	display: flex;
+	list-style: none;
+	margin-top: 10px;
+}
+.li_menu_tk_tt{
+	margin-left: 10px;
+}
+
+.bt_luachon{
+	background: #0e73c8;
+	font-weight: bold;
+}
+.bt_chitiet{
+	background: #0e73c8;
+	font-weight: bold;
+}

@@ -1,0 +1,681 @@
+doctype html
+html.wf-fontawesome-n4-active.wf-active(lang="vi")
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    // <meta charset="utf-8">
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    title
+      | Trang Chủ
+    // Plugin CSS
+    // Plugin CSS
+    link(href="style/plugin.scss.css" rel="stylesheet" type="text/css")
+    // Build Main CSS
+    link(href="style/base.scss.css" rel="stylesheet" type="text/css")
+    link(href="style/style.scss.css" rel="stylesheet" type="text/css")
+    link(href="style/module.scss.css" rel="stylesheet" type="text/css")
+    link(href="style/responsive.scss.css" rel="stylesheet" type="text/css")
+    link(rel="stylesheet" type="text/css" href="css/trangchu.css")
+    // Bizweb javascript customer
+    script.
+      var Bizweb = Bizweb || {};
+      Bizweb.store = 'template-usmart.mysapo.net';
+      Bizweb.id = 367008;
+      Bizweb.theme = { 'id': 737167, 'name': 'USmart 30062020 Footer', 'role': 'main' };
+      Bizweb.template = 'index';
+    script.
+      (function () {
+      function asyncLoad() {
+      var urls = ["//productreviews.sapoapps.vn/assets/js/productreviews.min.js?store=template-usmart.mysapo.net"];
+      for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+      }
+      };
+      window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false);
+      })();
+    script(type="text/javascript").
+      (function () {
+      var log = document.createElement('script'); log.type = 'text/javascript';
+      log.async = true;
+      log.src = '//stats.bizweb.vn/delivery/367008.js?lang=vi';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(log, s);
+      })();
+    script.
+      window.BizwebAnalytics = window.BizwebAnalytics || {};
+      window.BizwebAnalytics.meta = window.BizwebAnalytics.meta || {};
+      window.BizwebAnalytics.meta.currency = 'VND';
+      var meta = {};
+      for (var attr in meta) {
+      window.BizwebAnalytics.meta[attr] = meta[attr];
+      }
+    link(rel="stylesheet" href="./style/all.css" media="all")
+    link(rel="stylesheet" href="./style/all.css" media="all")
+    link(rel="stylesheet" href="./style/ekko-lightbox.min.css" type="text/css")
+    style(type="text/css").
+      .fancybox-margin{margin-right:0px;}
+    link(rel="stylesheet" type="text/css" href="./style/bpr.min.css" media="all")
+    link(rel="stylesheet" type="text/css" href="./style/productReviews.min.css" media="all")
+    script(type="text/javascript" src="style/vi.min.js.download")
+    script(type="text/javascript" src="js/jquery-3.5.1.js")
+  body.body_index
+    .opacity_menu
+    // Main content
+    // Menu mobile
+    #mySidenav.sidenav.menu_mobile.hidden-md.hidden-lg
+      .top_menu_mobile
+        a.logo-wrapper.close_menu(href="/")
+          img(src="images/logo.png" alt="logo Template CuBaQ")
+      .content_memu_mb
+        .link_list_mobile
+          ul.ct-mobile.hidden
+          ul.ct-mobile
+            li.level0.level-top.parent.level_ico
+              a(href="/") Trang chủ
+            li.level0.level-top.parent.level_ico
+              a(href="/gioithieu") Giới thiệu
+            li.level0.level-top.parent.level_ico
+              a(href="#") Thầy Trò
+              i.ti-plus.hide_close
+              ul.level0.sub-menu(style="display:none;")
+                li
+                  a(href="#" title="") Đăng Kí Gặp Mặt 
+                li
+                  a(href="#" title="") Học sinh hỏi thầy trả lời 
+                li
+                  a(href="#" title="") Tri ân thầy cô 
+            li.level0.level-top.parent.level_ico
+              a(href="/ketnoidamme") Kết Nối Đam Mê
+            li.level0.level-top.parent.level_ico
+              a(href="#") Khoảng khắc đáng nhớ
+            li.level0.level-top.parent.level_ico
+              a(href="#") Tài Khoản
+    // End
+    // HEADER NEW
+    header.header.header_s
+      .mid-header
+        .container
+          .row
+            .content_header
+              .header-main
+                .col-lg-3.col-md-3.center_logo
+                  .logo.logo_centers
+                    a.logo-wrapper(href="#")
+                      img(src="images/logo.png" alt="logo Template CuBaQ")
+                .col-lg-9.col-md-9
+                  .topbar_header.f-right
+                    ul.menu_list
+                      li.li_menu
+                        a.btn.btn-extra.btn_lam(href="/dangkyyeucau" title="Đăng nhập") Đăng ký yêu cầu
+                      li.li_menu
+                        a.btn.btn-primary.btn_thue(href="/dangxuat" title="Đăng ký") Đăng xuất
+                      li.li_menu
+                        img(src="images/phone_header.png")
+                        a.a_topright(href="tel:0966315546") 0966315546
+        .menu_search_mobi.hidden-md.hidden-lg
+          .menu-bar-h.nav-mobile-button.hidden-md.hidden-lg
+            i.fas.fa-bars
+          .search_mobile.showsearchfromtop.hidden-md.hidden-lg
+            .search_button_mobile
+              button.btn.icon-fallback-text
+                span.fas.fa-search
+          .searchboxlager.hidden-lg
+            .searchfromtop
+              form(action="#" autocomplete="off")
+                input#search.form-control(type="text" maxlength="70" name="query" placeholder="Nhập từ khóa tìm kiếm và ấn enter ...")
+        .wrap_main.hidden-xs.hidden-sm
+          .container
+            .row
+              .col-lg-10.col-md-10.col-sm-12.col-xs-12
+                .bg-header-nav.hidden-xs.hidden-sm
+                  div
+                    .row.row-noGutter-2
+                      nav.header-nav
+                        ul.item_big
+                          li.nav-item.active
+                            a.a-img(href="/")
+                              span Trang chủ
+                          li.nav-item
+                            a.a-img(href="/gioithieu")
+                              span Giới thiệu
+                          li.nav-item
+                            a.a-img(href="/thaytro")
+                              span Thầy Trò
+                              i.fa.fa-caret-down
+                            ul.item_small.hidden-sm.hidden-xs
+                              li
+                                a(href="#" title="") Đăng Kí Gặp Mặt 
+                              li
+                                a(href="#" title="") Học sinh hỏi thầy trả lời 
+                              li
+                                a(href="#" title="") Tri ân thầy cô 
+                          li.nav-item
+                            a.a-img(href="/ketnoidamme")
+                              span Kết Nối Đam Mê
+                          li.nav-item
+                            a.a-img(href="#")
+                              span Khoảng Khắc Đáng Nhớ
+                          li.nav-item
+                            a.a-img(href="#")
+                              span Tài Khoản
+              .col-lg-2.col-md-2.col-sm-12.col-xs-12
+                .header_search.header_searchs.search_new.hidden-sm.hidden-xs
+                  form.input-group.search-bar(action="#" method="get" role="search")
+                    input(type="hidden" name="type" value="product")
+                    input.input-group-field.st-default-search-input.search-text(type="search" name="query" value="" placeholder="Tìm kiếm")
+                    span.input-group-btn
+                      button.btn.icon-fallback-text
+                        span.fas.fa-search
+    // END HEADER NEW
+    script(src="style/jquery.min.js.download" type="text/javascript")
+    // Bizweb javascript
+    script(src="style/option-selectors.js.download" type="text/javascript")
+    script(src="style/api.jquery.js.download" type="text/javascript")
+    h1.hidden CuBa.Q
+    section.awe-section-1
+      .home-slider.owl-carousel.owl-theme.not-aweowl.section_slider.owl-loaded.owl-drag
+        .owl-stage-outer
+          .owl-stage(style="transform: translate3d(-2698px, 0px, 0px); transition: all 0s ease 0s; width: 8094px;")
+            .owl-item.cloned(style="width: 1349px;")
+              .items
+                a.clearfix(href="#")
+                  picture
+                    img(src="images/slider_1.jpg" alt="Slider 1")
+            .owl-item.cloned(style="width: 1349px;")
+              .items
+                a.clearfix(href="#")
+                  picture
+                    img(src="images/slider_2.jpg" alt="Slider 2")
+            .owl-item.active(style="width: 1349px;")
+              .items
+                a.clearfix(href="#")
+                  picture
+                    img(src="images/slider_1.jpg" alt="Slider 1")
+            .owl-item(style="width: 1349px;")
+              .items
+                a.clearfix(href="#")
+                  picture
+                    img(src="images/slider_2.jpg" alt="Slider 2")
+            .owl-item.cloned(style="width: 1349px;")
+              .items
+                a.clearfix(href="#")
+                  picture
+                    img(src="images/slider_1.jpg" alt="Slider 1")
+            .owl-item.cloned(style="width: 1349px;")
+              .items
+                a.clearfix(href="#")
+                  picture
+                    img(src="images/slider_2.jpg" alt="Slider 2")
+        .owl-nav.disabled
+          .owl-prev prev
+          .owl-next next
+        .owl-dots
+          .owl-dot.active
+            span
+          .owl-dot
+            span
+    section.awe-section-2
+      .section_service
+        .container
+          .row
+            .col-lg-12
+              .heading.hidden
+                h2
+                p
+              .utilities.a-center
+                .uti_content
+                  .owl-carousel.owl-theme.uti_content.owl-loaded.owl-drag(data-nav="false" data-dot="true" data-lg-items="3" data-md-items="3" data-sm-items="2" data-xs-items="1" data-margin="30")
+                    .owl-stage-outer
+                      .owl-stage(style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1170px;")
+                        .owl-item.active(style="width: 360px; margin-right: 30px;")
+                          .uti_body
+                            span.icon
+                              img(alt="Tri ân thầy cô" src="images/icon_ser_1.png")
+                            .content
+                              span.title Tri Ân Thầy Cô!
+                              span.sum
+                                | Đặt lịch gặp mặt với thầy cô một cách nhanh chóng không phải sợ trùng lớp, không phải chờ đợi.
+                              a.btn_thue(href="thaytro.html") Lựa Chọn
+                        .owl-item.active(style="width: 360px; margin-right: 30px;")
+                          .uti_body
+                            span.icon
+                              img(alt="Kết Nối Đam Mê" src="images/icon_ser_2.png")
+                            .content
+                              span.title Kết Nối Đam Mê
+                              span.sum
+                                | Có mong muốn 
+                                br
+                                |  - một buổi giao lưu 
+                                br
+                                |  -một buổi trao đổi đam mê
+                              a.btn_thue Lựa chọn
+                        .owl-item.active(style="width: 360px; margin-right: 30px;")
+                          .uti_body
+                            span.icon
+                              img(alt="Khoảng khắc đáng nhớ" src="images/icon_ser_3.png")
+                            .content
+                              span.title Khoảng Khắc Đáng Nhớ
+                              span.sum
+                                | Gói một chút kỉ niệm cho thời học sinh 
+                                br
+                                | một chút du dương cho tuổi trẻ 
+                                br
+                                |  một thứ để kể với bạn bè
+                              a.btn_thue Lựa chọn
+                    .owl-nav.disabled
+                      .owl-prev.disabled prev
+                      .owl-next.disabled next
+                    .owl-dots.disabled
+                      .owl-dot.active
+                        span
+    section.awe-section-3
+      .section_benefit
+        .container
+          .row
+            .hidden-xs.hidden-sm.hidden-md.col-lg-1
+            .col-xs-12.col-sm-12.col-md-5.col-lg-4
+              .margin-top-0.fix_margin.a-center
+                .heading
+                  h2.title-base
+                    span Lợi ích mà bạn có khi đến với chúng tôi
+                .section-content
+                  .info.margin-bottom-30
+                    | Không phải phân vân thời gian gặp mặt thầy cô 
+                    br
+                    | Thõa mãn đam về, đồng hành cùng đồng đội
+                    br
+                    | Không ngại chia sẻ, trao đổi kiến thức
+                    br
+                    | Chia sẻ kĩ niệm đáng nhớ
+                    br
+                  .about-contact
+                    a.btn.btn-primary.btn_benefit.btn_thue(title="Lựa chọn") Lựa chọn ngay
+            .hidden-xs.col-sm-12.col-md-7.col-lg-7.bg_benefit
+              img(src="images/bg_dangky.png")
+    section.awe-section-4
+      .section_product_feature.section_base
+        .container
+          .row.row-noGutter-2
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              .heading.a-center
+                h2(title="Nổi bật")
+                  a(href="#") Nổi bật
+                span Hãy xem chúng tôi có những gì!!!
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              .content_sec.clearfix
+                .prd_sec
+                  .owl_product_item_content.owl-carousel.not-dot2.owl-loaded.owl-drag(data-dot="false" data-nav="true" data-lg-items="3" data-md-items="3" data-sm-items="2" data-xs-items="1" data-margin="30")
+                    .owl-stage-outer
+                      .owl-stage(style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1560px;")
+                        .owl-item.active(style="width: 360px; margin-right: 30px;")
+                          .item.saler_item
+                            .owl_item_product.product-col
+                              .product-box-s.product-box-2
+                                .product-thumbnail.relative
+                                  a.a_img(href="#" title="Vật lý lớp 11")
+                                    img(src="images/noibat1.png" alt="Vật lý lớp 11")
+                                .product-info
+                                  .infor_teacher
+                                    .author
+                                      span.image_author
+                                        source(media="(max-width: 767px)" srcset="//bizweb.dktcdn.net/thumb/grande/100/367/008/themes/737167/assets/slider_2.jpg?1593482256319")
+                                        img(src="images/feel_1.png" alt="Avatar giáo viên")
+                                      .r_name
+                                        span.name_author Đặng Quốc Bảo
+                                        span.job_author Chủ nhiệm 12A2
+                                    h3.product-name
+                                      a(href="#" title="Vật lý lớp 11") "Học Nữa - Học Mãi"
+                                    .price-box.clearfix
+                                      .special-price
+                                        span.price.product-price Đậu đại học nhé các em
+                                    .summary_grid
+                                      .rte.description.text2line
+                                    .product-action.clearfix
+                                      form.variants.form-nut-grid(action="#" method="post" data-id="product-actions-15891413" enctype="multipart/form-data")
+                                        div
+                                          a.btn-circle.btn_view.btn.right-to.btn_base.btn_dkhoc.btn_thue(title="Đăng ký")
+                                            | Lựa Chọn
+                                          a.btn-circle.btn_view.btn.right-to.btn_base(title="Xem chi tiết" onclick="window.location.href='/vat-ly-lop-11'")
+                                            | Chi tiết
+                        .owl-item.active(style="width: 360px; margin-right: 30px;")
+                          .item.saler_item
+                            .owl_item_product.product-col
+                              .product-box-s.product-box-2
+                                .product-thumbnail.relative
+                                  a.a_img(href="#" title="Sinh học lớp 7")
+                                    img(src="images/noibat1.png" alt="Vật lý lớp 11")
+                                .product-info
+                                  .infor_teacher
+                                    .author
+                                      span.image_author
+                                        source(media="(max-width: 767px)" srcset="//bizweb.dktcdn.net/thumb/grande/100/367/008/themes/737167/assets/slider_2.jpg?1593482256319")
+                                        img(src="images/feel_1.png" alt="Avatar giáo viên")
+                                      .r_name
+                                        span.name_author Đặng Quốc Bảo
+                                        span.job_author Chủ nhiệm 12A2
+                                    h3.product-name
+                                      a(href="#" title="Vật lý lớp 11") "Học Nữa - Học Mãi"
+                                    .price-box.clearfix
+                                      .special-price
+                                        span.price.product-price Đậu đại học nhé các em
+                                    .summary_grid
+                                      .rte.description.text2line
+                                    .product-action.clearfix
+                                      form.variants.form-nut-grid(action="#" method="post" data-id="product-actions-15891413" enctype="multipart/form-data")
+                                        div
+                                          a.btn-circle.btn_view.btn.right-to.btn_base.btn_dkhoc.btn_thue(title="Đăng ký")
+                                            | Lựa Chọn
+                                          a.btn-circle.btn_view.btn.right-to.btn_base(title="Xem chi tiết" onclick="window.location.href='/vat-ly-lop-11'")
+                                            | Chi tiết
+                        .owl-item.active(style="width: 360px; margin-right: 30px;")
+                          .item.saler_item
+                            .owl_item_product.product-col
+                              .product-box-s.product-box-2
+                                .product-thumbnail.relative
+                                  a.a_img(href="#" title="Toán học lớp 2")
+                                    img(src="images/noibat1.png" alt="Vật lý lớp 11")
+                                .product-info
+                                  .infor_teacher
+                                    .author
+                                      span.image_author
+                                        source(media="(max-width: 767px)" srcset="//bizweb.dktcdn.net/thumb/grande/100/367/008/themes/737167/assets/slider_2.jpg?1593482256319")
+                                        img(src="images/feel_1.png" alt="Avatar giáo viên")
+                                      .r_name
+                                        span.name_author Đặng Quốc Nam
+                                        span.job_author Chủ nhiệm 12A2
+                                    h3.product-name
+                                      a(href="#" title="Vật lý lớp 11") "Học Nữa - Học Mãi"
+                                    .price-box.clearfix
+                                      .special-price
+                                        span.price.product-price Đậu đại học nhé các em
+                                    .summary_grid
+                                      .rte.description.text2line
+                                    .product-action.clearfix
+                                      form.variants.form-nut-grid(action="#" method="post" data-id="product-actions-15891413" enctype="multipart/form-data")
+                                        div
+                                          a.btn-circle.btn_view.btn.right-to.btn_base.btn_dkhoc.btn_thue(title="Đăng ký")
+                                            | Lựa Chọn
+                                          a.btn-circle.btn_view.btn.right-to.btn_base(title="Xem chi tiết" onclick="window.location.href='/vat-ly-lop-11'")
+                                            | Chi tiết
+                        .owl-item(style="width: 360px; margin-right: 30px;")
+                          .item.saler_item
+                            .owl_item_product.product-col
+                    .owl-nav
+                      .owl-prev.disabled prev
+                      .owl-next next
+                    .owl-dots
+                      .owl-dot.active
+                        span
+                      .owl-dot
+                        span
+    section.awe-section-5
+      .section_feedback
+        .container
+          .row
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12
+              .heading
+                h3 Phụ huynh đã nói gì về Cu.BaQ
+                span Hãy xem những người khác nói gì trong các đánh giá khách hàng của chúng tôi
+                .xemthemss(title="Đăng ký khóa học")
+                  a.btn.btn-primary.btn_feedback.btn_thue Nhận Xét
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12
+              #vslider.owl-comments
+                #vsliderboxes
+                  #vsliderboxs-inner(style="top: 0px;")
+                    .inactive.item_comments
+                      .content_comments
+                        .bf_img
+                        p Mọi thông tin mà tôi cần biết đều chuẩn xác Điều này minh chứng rõ ràng
+                        p.name_comments Mr: Quốc Bảo
+                      .thumb_comments
+                        .imgx
+                          img(src="images/feel_1.png")
+                    .inactive.item_comments
+                      .content_comments
+                        .bf_img
+                        p Mọi thông tin mà tôi cần biết đều chuẩn xác Điều này minh chứng rõ ràng.
+                        p.name_comments Mr: Quốc Bảo
+                      .thumb_comments
+                        .imgx
+                          img(src="images/feel_1.png")
+                    .inactive.item_comments
+                      .content_comments
+                        .bf_img
+                        p Mọi thông tin mà tôi cần biết đều chuẩn xác Điều này minh chứng rõ ràng.
+                        p.name_comments Mr: Quốc Bảo
+                      .thumb_comments
+                        .imgx
+                          img(src="images/feel_1.png")
+                    .inactive.item_comments
+                      .content_comments
+                        .bf_img
+                        p Mọi thông tin mà tôi cần biết đều chuẩn xác Điều này minh chứng rõ ràng.
+                        p.name_comments Mr: Quốc Bảo
+                      .thumb_comments
+                        .imgx
+                          img(src="images/feel_1.png")
+                #vslidernav
+                  ul
+                    li#1.circle-info.fcurrent
+                    li#2.circle-info
+    section.awe-section-6
+      .section_blog_virtual
+        .container
+          .row
+            .heading
+              h2
+                a(href="#" title="Tin tức mới") Tin tức mới
+            .news_owl.blog_right.col-lg-6.col-md-6.col-sm-12.col-xs-12
+              .owl_reviews.owl-carousel.blog_index_right_owl.not-aweowl.owl-loaded.owl-drag
+                .owl-stage-outer
+                  .owl-stage(style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1635px;")
+                    .owl-item.active(style="width: 515px; margin-right: 30px;")
+                      .item_blog_big
+                        .figure-big
+                          .img_thumb_blogs
+                            a(href="#" title="tin tin noi bat")
+                              img(src="images/anhnhac.jpg")
+                          .content_item_blogs
+                            .blog_home_title.margin-top-20.margin-bottom-10
+                              h3.news_home_content_short_info
+                                a(href="#" title="tin tuc noi bat") Ngai chia sẻ, ngại tìm hiểu ngại học hỏi đó là một điểm yếu lớn nhất của bạn
+                            .content_day_blog.margin-bottom-10
+                              span.post-times
+                                | Bởi Đặng Quốc Bảo
+                              span.tom |
+                              span.short_time
+                                | 24/07/2012
+                              span.tom.hidden-xs |
+                              span.short_time.fix_xs 0 bình luận
+                            .summary_item_blog
+                              p ca nhạc là tâm hồn
+                    .owl-item(style="width: 515px; margin-right: 30px;")
+                    .owl-item(style="width: 515px; margin-right: 30px;")
+                      .item_blog_big
+                        .figure-big
+                          .content_item_blogs
+                            .blog_home_title.margin-top-20.margin-bottom-10
+                              h3.news_home_content_short_info
+                                a(href="#" title="Hiệu trưởng sẽ cấp giấy chứng nhận hoàn thành THPT") Hiệu trưởng sẽ cấp giấy chứng nhận hoàn thành THPT
+                            .content_day_blog.margin-bottom-10
+                              span.post-times
+                                | Bởi Hoàng Ngọc Anh
+                              span.tom |
+                              span.short_time
+                                | 24/7/2020
+                              span.tom.hidden-xs |
+                              span.short_time.fix_xs 0 bình luận
+                            .summary_item_blog
+                              p
+                                | Phương án này cũng được đưa ra bàn luận tại cuộc họp của Hội đồng quốc gia giáo dục về kỳ thi THPT quốc gia vào sáng nay - 25/9 - tại Văn phòng Ch...
+                .owl-nav
+                  .owl-prev.disabled prev
+                  .owl-next next
+                .owl-dots.disabled
+            .content-blog-index.blog_left.col-lg-6.col-md-6.col-sm-12.col-xs-12
+              .loop-blog.item_blog_big
+                .thumb-left
+                  a(href="#")
+                    img(src="images/anhnhac.jpg")
+                .name-right
+                  h3
+                    a(href="#") Cần một trận thua bóng đá
+                  .content_day_blog.margin-bottom-10
+                    span.post-times
+                      | Bởi Dương Xuân Đà
+                    span.tom |
+                    span.short_time
+                      | 24/7/2020
+                    span.tom.hidden-xs |
+                    span.short_time.fix_xs 0 bình luận
+              .loop-blog.item_blog_big
+                .thumb-left
+                  a(href="#")
+                    img(src="images/anhnhac.jpg")
+                .name-right
+                  h3
+                    a(href="#") Tại sao bạn cần trải nghiệm và tiếp thu
+                  .content_day_blog.margin-bottom-10
+                    span.post-times
+                      | Bởi Nhung lụa
+                    span.tom |
+                    span.short_time
+                      | 24/7/2020
+                    span.tom.hidden-xs |
+                    span.short_time.fix_xs 0 bình luận
+              .loop-blog.item_blog_big
+                .thumb-left
+                  a(href="#")
+                    img(src="images/anhnhac.jpg")
+                .name-right
+                  h3
+                    a(href="#") Đam mê đồng hành cùng thanh xuân tươi đẹp
+                  .content_day_blog.margin-bottom-10
+                    span.post-times
+                      | Bởi Đào Hiếu
+                    span.tom |
+                    span.short_time
+                      | 24/7/2020
+                    span.tom.hidden-xs |
+                    span.short_time.fix_xs 0 bình luận
+    footer.footer
+      .container
+        .row
+          .col-lg-12.col-md-12
+            .wp_footer
+              .new-letter.a-center
+                .col-lg-12.col-md-12.padding_
+                  .letter-left.heading
+                    h3 Nhập email
+                    span Để nhận tin tức mới của chúng tôi
+                  form#mc-embedded-subscribe-form(action="#" method="post" name="mc-embedded-subscribe-form" target="_blank")
+                    .input-group
+                      input#mail.form-control(type="email" autocomplete="off" value="" placeholder="Nhập email của bạn" name="EMAIL")
+                      span.input-group-btn
+                        button#subscribe.btn.btn-primary.button_gradient(name="subscribe" type="submit" title="Gửi ngay") Gửi ngay
+              .mid-footer
+                .col-lg-1.hidden-md.hidden-sm.hidden-xs
+                .col-xs-12.col-sm-12.col-md-6.col-lg-4
+                  .widget_left.widget_first_childs
+                    .widget-ft-top
+                      .hotline_footer
+                        .logo_footer
+                          a.logo-wrapper(href="#")
+                            img(src="images/logo.png" alt="logo Template Usmart")
+                        .hotline_footer
+                          ul.contact.padding-0
+                            li.li_footer_h
+                              i.fas.fa-map-marker-alt
+                              span.txt_content_childs
+                                | Trường THPT Đồng Lộc
+                            li.li_footer_h
+                              span.txt_content_childs
+                                i.fas.fa-phone
+                                a(href="tel:0966315546") 0966315546
+                            li.li_footer_h
+                              span.txt_content_childs
+                                i.fas.fa-envelope-open
+                                a(href="mailto:awesome160916@gmail.com") Quocbaoa2k41@gmail.com
+                .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                  .row
+                    .widget_right
+                      .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                        .widget-ft.first
+                          h4.title-menu
+                            a
+                              | Dịch vụ của chúng tôi
+                          div
+                            ul.list-menu
+                              li.li_menu
+                                a(href="trangchu.html") Trang chủ
+                              li.li_menu
+                                a(href="gioithieu.html") Giới thiệu
+                              li.li_menu
+                                a(href="#") Thầy - Trò
+                              li.li_menu
+                                a(href="#") Kết Nối Đam Mê
+                              li.li_menu
+                                a(href="#") Khoảng Khắc Đáng Nhớ
+                              li.li_menu
+                                a(href="#") Liên hệ
+                      .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                        .widget-ft
+                          h4.title-menu
+                            a
+                              | Về chúng tôi
+                          div
+                            ul.list-menu
+                              li.li_menu
+                                a(href="trangchu.html") Trang chủ
+                              li.li_menu
+                                a(href="gioithieu.html") Giới thiệu
+                              li.li_menu
+                                a(href="#") Thầy - Trò
+                              li.li_menu
+                                a(href="#") Kết Nối Đam Mê
+                              li.li_menu
+                                a(href="#") Khoảng Khắc Đáng Nhớ
+                              li.li_menu
+                                a(href="#") Tài Khoản
+                .col-lg-1.hidden-md.hidden-sm.hidden-xs
+      .row
+        .container
+          .bg-footer-bottom.copyright.col-lg-12.col-md-12.col-sm-12.col-xs-12
+            .inner
+              #copyright.fot_copyright.a-left
+                span.wsp
+                  | © Bản quyền thuộc về 
+                  b Đặng Quốc Bảo
+                  span.hidden-xs  | 
+                  span.mobile
+                    | Cựu học sinh 
+                    a(href="#" rel="nofollow" title="Sapo" target="_blank") THPT Đồng Lộc
+              a#back-to-top.backtop(href="#" title="Lên đầu trang")
+                | Lên đầu trang 
+                i.fas.fa-chevron-up
+    script(type="text/javascript").
+      WebFontConfig = {
+      custom: {
+      families: ['FontAwesome'],
+      urls: ['https://use.fontawesome.com/releases/v5.7.2/css/all.css']
+      }
+      };
+      (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+      })();
+      var resourcec = document.createElement('link');
+      resourcec.setAttribute("rel", "stylesheet");
+      resourcec.setAttribute("href","https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.css");
+      resourcec.setAttribute("type","text/css");
+      var headc = document.getElementsByTagName('head')[0];
+      headc.appendChild(resourcec);
+    div

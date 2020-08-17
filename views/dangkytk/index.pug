@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Tạo Tài Khoản
+    // Font Icon
+    link(rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css")
+    // Main css
+    link(rel="stylesheet" href="css/styledn.css")
+    link(rel="stylesheet" type="text/css" href="css/bootstrap.min.css")
+  body
+    .main
+      // Sign up form
+      .container
+        .row
+          .col-lg-5.col-md-4.col-sm-4.col-xs-4
+          .col-lg-3.col-md-4.col-sm-4.col-xs-4
+            img.logo_img(src="images/logo.png")
+          .col-lg-4.col-md-4.col-sm-4.col-xs-4
+      // Sing in  Form
+      section.sign-in
+        .container
+          .signin-content
+            .signin-image
+              figure
+                img(src="images/signup-image.jpg" alt="sing up image")
+            .signin-form
+              h2.form-title Create an account
+              form#login-form.register-form(name='frmdangkytaikhoan' action='/dangky-t-k' method="POST")
+                .form-group
+                  label(for="ten")
+                    i.zmdi.zmdi-account.material-icons-name
+                  input(type="text" name="name"  placeholder="Đặng Quốc Bảo")
+                .form-group
+                  label(for="email")
+                    i.zmdi.zmdi-account.material-icons-name
+                  input(type="text" name="email" placeholder="quocbaoa2k41@gmail.com")
+                .form-group
+                  label(for="password")
+                    i.zmdi.zmdi-lock
+                  input#your_pass(type="password" name="password" placeholder="Mật khẩu")
+                .form-group
+                  label(for="password")
+                    i.zmdi.zmdi-lock
+                  input#your_pass(type="password" name="password1" placeholder="Nhập lại mật khẩu")
+                .form-group.form-button
+                  // <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                  button.btn.btn-primary(type='submit') Create
+              .social-login
+                span.social-label Or login with
+                ul.socials
+                  li
+                    a(href="#")
+                      i.display-flex-center.zmdi.zmdi-facebook
+                  li
+                    a(href="#")
+                      i.display-flex-center.zmdi.zmdi-twitter
+                  li
+                    a(href="#")
+                      i.display-flex-center.zmdi.zmdi-google
+    // JS
+    script(type="text/javascript" src="js/jquery-3.5.1.js")
+    script(src="js/maindn.js")
+  // This templates was made by Colorlib (https://colorlib.com)

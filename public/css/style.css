@@ -1,0 +1,342 @@
+
+.btn_dangnhap{background: #0e73c8;font-weight: bold;}
+.btn_dangki{background: #ff9900;font-weight: bold;}
+.menu_list{display: flex;text-decoration: none;}
+.menu_list{	
+	list-style: none;
+	/*margin-left: 300px;*/
+	padding-top: 20px;
+    text-align: center;
+}
+
+.logo{
+    text-align: center;
+}
+.a_topright{
+	margin-left: 5px;
+}
+.item_big{
+	display: flex;
+	text-decoration: none;
+	list-style: none;
+}
+.menu-responsive{
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #dddddd;
+    display: none;
+} 
+.nav-item {
+	margin-left: 50px;
+	font-family: Arial;
+	color: black;
+}
+.a-img{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+.search-bar{
+	display: flex;
+}
+
+.wrap_main{
+	border-top: 1px solid #e1e1e1;
+}
+
+.row{
+	margin-top: 10px;
+}
+.icon-fallback-text{
+	margin-left: 5px;
+}
+.icon-fallback-text img{
+    width: 25px;
+    height: 25px;
+
+}
+.items >.clearfix> picture >img{
+	width: 100%;
+}
+.awe-section-2{
+	 /*position: relative;*/
+     /*background: red;*/
+    position: absolute;
+    /* background: red; */
+    top: 520px;
+    left: 80px;
+}
+.owl-stage-2{
+	display: flex;
+	text-align: center;
+}
+
+.section_service .uti_body1 {
+    padding: 35px 30px 50px 30px;
+    float: left;
+    width: 100%;
+    border-radius: 3px;
+    background: #00b0a8;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+.section_service .uti_body2 {
+    padding: 35px 30px 28px 30px;
+    float: left;
+    width: 100%;
+    border-radius: 3px;
+    background: #3372f4;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+.section_service .uti_body3 {
+    padding: 35px 30px 73px 30px;
+    float: left;
+    width: 100%;
+    border-radius: 3px;
+    background: #f09000;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+.section_service {
+    margin: 60px 0 40px 0;
+}
+.section_service .uti_body .content {
+    float: left;
+    text-align: center;
+}
+.uti_body1> .content >.title {
+    text-align: center;
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 0 10px 0;
+    color: #fff;
+}
+.uti_body1> .content > .sum {
+    font-weight: 400;
+    color: #fff;
+}
+.uti_body1> .content> .btn_thue {
+    color: #fff;
+    text-decoration: underline;
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+}
+.uti_body2> .content >.title {
+    text-align: center;
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 0 10px 0;
+    color: #fff;
+}
+.uti_body2> .content > .sum {
+    font-weight: 400;
+    color: #fff;
+}
+.uti_body2> .content li {
+	/*text-decoration: none;*/
+	text-align: center;
+    color: #fff;
+    list-style: none;
+}
+.uti_body2> .content> .btn_thue {
+    color: #fff;
+    text-decoration: underline;
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+}.uti_body3> .content >.title {
+    text-align: center;
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 0 10px 0;
+    color: #fff;
+}
+.uti_body3> .content > .sum {
+    font-weight: 400;
+    color: #fff;
+}
+.uti_body3> .content> .btn_thue {
+    color: #fff;
+    text-decoration: underline;
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+}
+.awe-section-3{
+     /*position: relative;*/
+     /*background: red;*/
+    position: absolute;
+    /* background: red; */
+    top: 980px;
+    left: 80px;
+}
+.heading{
+    text-align: center;
+}
+.section-content{
+    text-align: center;
+    margin-top: 20px;
+}
+.info{
+    font-size: 16px;
+    line-height: 36px;
+    color: #252525;
+    margin-top: 0px;
+    float: left;
+    width: 100%;
+}
+.about-contact a{
+    margin-top: 10px;
+    font-weight: bold;
+}
+.section_benefit{
+ 
+}
+/*.benefit{*/
+    /*background-image: url('../images/bg_dangky.png');*/
+    /*height: 100px;*/
+    /*position: absolute;*/
+    /*margin-top: 0px;*/
+    /*margin-left: 250px;*/
+/*}*/
+.awe-section-4{
+    margin-top: 100px;
+}
+.headingg {
+    margin-top: 320px;
+}
+.headingg-4{
+    position: absolute;
+    top:450px;
+    margin-left: 450px;
+    font-family:UTM Loko;
+
+}
+.headingg-4> h2{
+    font-size: 30px; 
+}
+.uti_body_4_1 > .content > .title{
+    text-align: center;
+    color: black;
+}
+.prd_sec{
+    display: flex;
+
+}
+.icon_4 > img{
+    height: 220px;
+    border-radius:10px 30px 70px;
+}
+.owl-item-4{
+    margin-left: 50px;
+    /*border:1px solid #dddddd;*/
+}
+.icon_4_2 > img{
+    height: 50px;
+    border-radius:10% 50%;
+}
+.owl-item-4 >.uti_body_4 >.content >.icon_4_2{
+    display: flex;
+}
+.owl-item-4 >.uti_body_4 >.content{
+    padding-top: 10px;
+    font-family: UTM Flavour;
+}
+.content_sec{
+    margin-top: 20px;
+}
+.btn_luachon{
+    background: #0e73c8;
+    margin-top: 10px;
+}
+.icon_4_2> ul li{
+    text-decoration: none;
+    list-style: none;
+}
+.inactive{
+    display: flex;
+}
+.imgx > img{
+    height: 90px;
+    border-radius:10% 10%;
+}
+.section_feedback{
+    margin-top: 80px;
+
+}
+.inactive{
+    background: #dbe4df;
+    margin-top: 10px;
+    border-radius:10% 10%;
+
+}
+.content_comments > img{
+    margin-right:400px;
+}
+.inactive > .content_comments >.name_comments{
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.heading-5 > h3{
+    font-weight: bold;
+}
+.img-sc-5 {
+    height: 130px;
+}
+.mid-footer{
+    display: flex;
+    margin-top: 40px;
+    margin-right: 450px;
+}
+.hotline_footer_2{
+    width: 220px;
+}
+.widget_right{
+    display: flex;
+    margin-left: 200px;
+}
+.widget-ft{
+    margin-left: 10px;
+    width: 240px;
+}
+.letter-left{
+    margin-top: 50px;
+}
+.letter-left> h3 {
+    font-weight: bold;
+    font-family: UTM Flavour;
+}
+.letter-left> span {
+    font-family: UTM Flavour;
+}
+.contact{
+    list-style: none;
+    text-align: left;
+}
+.list-menu-ft{
+    list-style: none;
+    /*text-align: left;*/
+
+}
+.nav-item-ft{
+    margin-right: 20px;
+    font-family: Arial;
+}
