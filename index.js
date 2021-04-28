@@ -27,6 +27,12 @@ var dangkyyeucauRouter= require('./routes/dangkyyeucau.route');
 var thaytroRouter= require('./routes/thaytro.route');
 var dangxuatRouter= require('./routes/dangxuat.route');
 var ketnoidammeRouter= require('./routes/ketnoidamme.route');
+var khoanhkhacdangnhoRouter= require('./routes/khoanhkhacdangnho.route');
+var taikhoanRouter= require('./routes/taikhoan.route');
+var dangkylichhenRouter= require('./routes/dangkylichhen.route');
+var lichhenRouter= require('./routes/lichhen.route');
+var chitietketnoidammeRouter= require('./routes/chitietketnoidamme.route');
+
 
 
 app.use('/',trangchuRouter);
@@ -37,6 +43,14 @@ app.use('/dangkyyeucau',dangkyyeucauRouter);
 app.use('/thaytro',thaytroRouter);
 app.use('/dangxuat',dangxuatRouter);
 app.use('/ketnoidamme',ketnoidammeRouter);
+app.use('/khoanhkhacdangnho',khoanhkhacdangnhoRouter);
+app.use('/taikhoan',taikhoanRouter);
+app.use('/dangkylichhen',dangkylichhenRouter);
+app.use('/lichhen',lichhenRouter);
+app.use('/chitietketnoidamme',chitietketnoidammeRouter);
+
+
+
 
 app.get('/dang-nhap', function(req, res) {
     // res.render('');

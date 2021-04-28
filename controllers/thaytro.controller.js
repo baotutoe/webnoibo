@@ -1,9 +1,8 @@
-var Product = require('../models/product.model');
+var Hoidap = require('../models/hoidap.model');
 
 module.exports.index = async function(req, res) {
-      var products = await Product.find();
-      // console.log(products);
+      var hoidaps = await Hoidap.find();
 	res.render('thaytro/index', {
-		products: products
+		hoidaps: hoidaps
 	});
 };

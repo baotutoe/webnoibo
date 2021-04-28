@@ -1,0 +1,270 @@
+doctype html
+html(lang="en")
+  head
+    // Required meta tags
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description" content="au")
+    meta(name="author" content="Bao")
+    meta(name="keywords" content="Bao")
+    // Title Page
+    title Tài Khoản
+    // Fontfaces CSS
+    link(href="css/font-face.css" rel="stylesheet" media="all")
+    link(href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all")
+    link(href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all")
+    link(href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all")
+    // Bootstrap CSS
+    link(href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all")
+    // Vendor CSS
+    link(href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all")
+    link(href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all")
+    link(href="vendor/wow/animate.css" rel="stylesheet" media="all")
+    link(href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all")
+    link(href="vendor/slick/slick.css" rel="stylesheet" media="all")
+    link(href="vendor/select2/select2.min.css" rel="stylesheet" media="all")
+    link(href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all")
+    // Main CSS
+    link(href="css/theme.css" rel="stylesheet" media="all")
+    
+    link(rel="stylesheet" type="text/css" href="css/test.css")
+    script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+
+  body.animsition
+  
+    script(type="text/javascript").
+      $(document).ready(function() {
+      $('a.login-window').click(function() {
+      //lấy giá trị thuộc tính href - chính là phần tử "#login-box"
+      var loginBox = $(this).attr('href');
+      //cho hiện hộp đăng nhập trong 300ms
+      $(loginBox).fadeIn(300);
+      // thêm phần tử id="over" vào sau body
+      $('body').append('<div id="over">');
+      $('#over').fadeIn(300);
+      return false;
+      });
+      // khi click đóng hộp thoại
+      $(document).on('click', "a.close, #over", function() {
+      $('#over, .login').fadeOut(300 , function() {
+      $('#over').remove();
+      });
+      return false;
+      });
+      });
+
+    .page-wrapper
+      // HEADER MOBILE
+      header.header-mobile.d-block.d-lg-none
+        .header-mobile__bar
+          .container-fluid
+            .header-mobile-inner
+              a.logo(href="index.html")
+                img(src="images/icon/logo.png" alt="CoolAdmin")
+              button.hamburger.hamburger--slider(type="button")
+                span.hamburger-box
+                  span.hamburger-inner
+        nav.navbar-mobile
+          .container-fluid
+            ul.navbar-mobile__list.list-unstyled
+              li
+                a(href="table.html")
+                  i.fas.fa-table
+                  | Tables
+              li.has-sub
+                a.js-arrow(href="#")
+                  i.fas.fa-copy
+                  | Pages
+                ul.navbar-mobile-sub__list.list-unstyled.js-sub-list
+                  li
+                    a(href="login.html") Login
+                  li
+                    a(href="register.html") Register
+                  li
+                    a(href="forget-pass.html") Forget Password
+              li.has-sub
+                a.js-arrow(href="#")
+                  i.fas.fa-desktop
+                  | UI Elements
+                ul.navbar-mobile-sub__list.list-unstyled.js-sub-list
+                  li
+                    a(href="button.html") Button
+                  li
+                    a(href="badge.html") Badges
+                  li
+                    a(href="tab.html") Tabs
+                  li
+                    a(href="card.html") Cards
+                  li
+                    a(href="alert.html") Alerts
+                  li
+                    a(href="progress-bar.html") Progress Bars
+                  li
+                    a(href="modal.html") Modals
+                  li
+                    a(href="switch.html") Switchs
+                  li
+                    a(href="grid.html") Grids
+                  li
+                    a(href="fontawesome.html") Fontawesome Icon
+                  li
+                    a(href="typo.html") Typography
+      // END HEADER MOBILE
+      // MENU SIDEBAR
+      aside.menu-sidebar.d-none.d-lg-block
+        .logo
+          a(href="#")
+            img(src="images/icon/logo.png" alt="CuBaQ")
+        .menu-sidebar__content.js-scrollbar1
+          nav.navbar-sidebar
+            ul.list-unstyled.navbar__list
+              li.active
+                a(href="table.html")
+                  i.fas.fa-table
+                  | Kết Nối Đam Mê
+              li.active
+                a(href="table.html")
+                  i.fas.fa-table
+                  | Khoảnh Khắc Đáng Nhớ
+              li.active
+                a(href="table.html")
+                  i.fas.fa-table
+                  | Tài Khoản
+      // END MENU SIDEBAR
+      // PAGE CONTAINER
+      .page-container
+        // HEADER DESKTOP
+        header.header-desktop
+          .section__content.section__content--p30
+            .container-fluid
+              .header-wrap
+                form.form-header(action="" method="")
+                  input.au-input.au-input--xl(type="text" name="search" placeholder="Tìm Kiếm")
+                  a.au-btn--submit(type="submit")
+                    i.zmdi.zmdi-search
+                .header-button
+                  .account-wrap
+                    .account-item.clearfix.js-item-menu
+                      .image
+                        img(src="images/icon/avatar-01.jpg" alt="Quốc Bảo")
+                      .content
+                        a.js-acc-btn(href="#") Quốc Bảo
+                      .account-dropdown.js-dropdown
+                        .info.clearfix
+                          .image
+                            a(href="#")
+                              img(src="images/icon/avatar-01.jpg" alt="Quốc Bảo")
+                          .content
+                            h5.name
+                              a(href="#") Quốc Bảo
+                            span.email quocbaoa2k41@gmail.com
+                        .account-dropdown__footer
+                          a(href="/")
+                            i.zmdi.zmdi-power
+                            | Trở về trang chủ
+        // END HEADER DESKTOP
+        // MAIN CONTENT
+        .main-content
+          .section__content.section__content--p30
+            .container-fluid
+              .row
+                .col-md-12
+                  // DATA TABLE
+                  h3.title-5.m-b-35 Kết Nối Đam Mê
+                  .table-responsive.table-responsive-data2
+                    table.table.table-data2
+                      thead
+                        tr
+                          th
+                            label.au-checkbox
+                              input(type="checkbox")
+                              span.au-checkmark
+                          th Tiêu Đề
+                          th Ghi Chú
+                          th Nội Dung
+                          th
+                      tbody
+                      each product in products
+                        tr.spacer
+                        tr.tr-shadow
+                          td
+                            label.au-checkbox
+                              input(type="checkbox")
+                              span.au-checkmark
+                          td= product.tieude
+                          td
+                            span.block-email= product.ghichu
+                          td.desc= product.noidung
+                          td
+                            .table-data-feature
+                              a.item(class="login-window button" href="#login-box" data-toggle="tooltip" data-placement="top" title="Edit")
+                                i.zmdi.zmdi-edit
+                              a.item(data-toggle="tooltip" data-placement="top" title="Delete")
+                                i.zmdi.zmdi-delete
+                              a.item(data-toggle="tooltip" data-placement="top" title="More")
+                                i.zmdi.zmdi-more
+                  // END DATA TABLE
+              .row
+                .col-md-12
+                  .copyright
+                    p
+                      | © Bản quyền thuộc về 
+                      b Đặng Quốc Bảo
+                      span.hidden-xs  | 
+                      span.mobile
+                        | Cựu học sinh 
+                        a(href="#" rel="nofollow" title="Sapo" target="_blank") THPT Đồng Lộc
+                        | .
+    #login-box.login
+      .card
+        .card-header
+          strong Chỉnh Sửa
+          |  Dử Liệu
+        .card-body.card-block
+          form.form-horizontal(action="/taikhoan" method="POST" )
+           each product in products
+            .row.form-group
+              .col.col-md-3
+                label.form-control-label ID
+              .col-12.col-md-9
+                p.form-control-static(name="id")= product._id
+            .row.form-group
+              .col.col-md-3
+                label.form-control-label(for="Tiêu Đề") Tiêu Đề
+              .col-12.col-md-9
+                input#text-input.form-control(type="text" name="tieude2" placeholder="Text")
+                small.form-text.text-muted 
+            .row.form-group
+              .col.col-md-3
+                label.form-control-label(for="Ghi Chú") Ghi Chú
+              .col-12.col-md-9
+                input#email-input.form-control(name="ghichu2" placeholder="Text")
+                small.help-block.form-text 
+            .row.form-group
+              .col.col-md-3
+                label.form-control-label(for="Nội Dung") Nội Dung
+              .col-12.col-md-9
+                textarea#textarea-input.form-control(name="noidung2" rows="9" placeholder="Content...")
+            .card-footer
+            button.btn.btn-primary.btn-sm(type="submit")
+                i.fa.fa-dot-circle-o
+                |  Submit
+    // Jquery JS
+    script(src="vendor/jquery-3.2.1.min.js")
+    // Bootstrap JS
+    script(src="vendor/bootstrap-4.1/popper.min.js")
+    script(src="vendor/bootstrap-4.1/bootstrap.min.js")
+    // Vendor JS
+    script(src="vendor/slick/slick.min.js")
+    script(src="vendor/wow/wow.min.js")
+    script(src="vendor/animsition/animsition.min.js")
+    script(src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js")
+    script(src="vendor/counter-up/jquery.waypoints.min.js")
+    script(src="vendor/counter-up/jquery.counterup.min.js")
+    script(src="vendor/circle-progress/circle-progress.min.js")
+    script(src="vendor/perfect-scrollbar/perfect-scrollbar.js")
+    script(src="vendor/chartjs/Chart.bundle.min.js")
+    script(src="vendor/select2/select2.min.js")
+    // Main JS
+    script(src="js/main.js")
+// end document

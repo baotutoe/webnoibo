@@ -8,3 +8,12 @@ const mongoose = require('mongoose');
 
 require('./user.model');
 require('./product.model');
+require('./product_kkdn.model');
+require('./hoidap.model');
+require('./lichgapmat.model');
+require('./bangmoi.model');
+require('./bangmoi2.model');
+
+
+
+

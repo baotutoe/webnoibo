@@ -129,20 +129,17 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
               i.ti-plus.hide_close
               ul.level0.sub-menu(style="display:none;")
                 li.level1
-                  a(href="#")
+                  a(href="/lichhen")
                     span Đăng Kí Gặp Mặt 
                 li.level1
-                  a(href="#")
+                  a(href="/thaytro")
                     span Học sinh hỏi thầy trả lời
-                li.level1
-                  a(href="")
-                    span Tri ân thầy cô
             li.level0.level-top.parent.level_ico
               a(href="/ketnoidamme") Kết Nối Đam Mê
             li.level0.level-top.parent.level_ico
-              a(href="") Khoảng khắc đáng nhớ
+              a(href="/khoanhkhacdangnho") Khoảng khắc đáng nhớ
             li.level0.level-top.parent.level_ico
-              a(href="") Tài Khoản
+              a(href="/taikhoan") Tài Khoản
     // End
     // HEADER NEW
     header.header.header_s
@@ -192,24 +189,24 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
                             a.a-img(href="/gioithieu")
                               span Giới thiệu
                           li.nav-item
-                            a.a-img(href="/thaytro")
+                            a.a-img(href="")
                               span Thầy Trò
                               i.fa.fa-caret-down
                             ul.item_small.hidden-sm.hidden-xs
                               li
-                                a(href="#" title="") Đăng ký gặp mặt 
+                                a(href="/dangkylichhen" title="") Đăng ký gặp mặt
                               li
-                                a(href="#" title="") Học sinh hỏi thầy trả lời 
+                                a(href="/lichhen" title="") lịch hẹn
                               li
-                                a(href="#" title="") Tri ân thầy cô  
+                                a(href="/thaytro" title="") Học sinh hỏi thầy trả lời 
                           li.nav-item
                             a.a-img(href="/ketnoidamme")
                               span Kết Nối Đam Mê
                           li.nav-item
-                            a.a-img(href="#")
+                            a.a-img(href="/khoanhkhacdangnho")
                               span Khoảng Khắc Đáng Nhớ
                           li.nav-item
-                            a.a-img(href="#")
+                            a.a-img(href="/taikhoan")
                               span Tài Khoản
               .col-lg-2.col-md-2.col-sm-12.col-xs-12
                 .header_search.header_searchs.search_new.hidden-sm.hidden-xs
@@ -228,7 +225,7 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
     .breadcrumb_background
       .title_full
         .container.a-center
-          p.title_page  Thầy - Trò
+          p.title_page  Học Sinh Hỏi - Thầy Trả Lời
     section.bread-crumb.w_100.f-left
       span.crumb-border
       .container
@@ -242,16 +239,21 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
                   i.fa.fa-angle-right
               li
                 strong
-                  span  Thầy - Trò
+                  span  Thầy Trò
+                span.mr_lr
+                  i.fa.fa-angle-right
+              li
+                strong
+                  span  Học Sinh Hỏi - Thầy Trả Lời
     .container
         .row
             .col-lg-4
             .col-lg-8
-                each product in products
+                each hoidap in hoidaps
                     .product-box-s.product-box-2.product-box-col
                         .product-thumbnail.relative
                             a.a_img(href="#" title="Vật lý lớp 11")
-                                img(src="images/noibat1.png" alt="Vật lý lớp 11")
+                                img(src="images/noibat2.png" alt="Vật lý lớp 11")
                         .product-info
                             .infor_teacher
                                 .author
@@ -261,17 +263,17 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
                                         span.name_author Nguyễn Tuấn Minh
                                         span.job_author Giáo viên cấp 3
                                 h3.product-name
-                                    a(href="#" title="Vật lý lớp 11")= product.tieude
+                                    a(href="#" title="Vật lý lớp 11")= hoidap.tieude
                                 .price-box.clearfix
                                     .special-price
-                                        span.price.product-price= product.ghichu
+                                        span.price.product-price= hoidap.ghichu
                                 .summary_grid
-                                    .rte.description.text2line= product.noidung
+                                    .rte.description.text2line= hoidap.noidung
                                 .product-action.clearfix
                                     form.variants.form-nut-grid(action="#" method="post" data-id="product-actions-15891413" enctype="multipart/form-data")
                                         div
                                             a.btn-circle.btn_view.btn.right-to.btn_base.btn_dkhoc.btn_thue(title="Đăng ký")
-                                                | Đăng ký
+                                                | Trò chuyện
                                             a.btn-circle.btn_view.btn.right-to.btn_base(title="Xem chi tiết" onclick="window.location.href='/vat-ly-lop-11'")
                                                 | Chi tiết
     .text-right

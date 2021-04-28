@@ -14,7 +14,7 @@ module.exports.check = async function (req, res, next) {
     try {
         let foundUser = await User.findOne({ email: email.trim()})
             .exec();
-        console.log(foundUser);
+        // console.log(foundUser);
         // console.log(2);
         if (!foundUser) {
             res.render('dangnhap/index',{
@@ -24,25 +24,19 @@ module.exports.check = async function (req, res, next) {
             // console.log(error);
             return;
         }
-        console.log(4);
+        // console.log(4);
         let encryptedPassword = foundUser.password;
-        console.log(5);
+        // console.log(5);
         let checkPassword = await bcrypt.compare(password, encryptedPassword);
-        console.log(checkPassword);
+        // console.log(checkPassword);
 
         if (checkPassword === true) {
             //Đăng nhập thành công
-            console.log(7);
+            // console.log(7);
             let jsonObject = {
                 id: foundUser._id
             }
-            // await jwt.sign(jsonObject,
-            //     secretString, {
-            //     expiresIn: 86400 // Expire trong 24 giờ
-            // });
-            // res.cookie('email', req.body.email, {
-            //     signed: true
-            // });
+
             res.redirect('/');
         } else {
             res.render('dangnhap/index', {
