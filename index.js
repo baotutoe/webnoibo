@@ -17,7 +17,8 @@ app.set('views', './views');
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.use(express.static(path.join(__dirname, "public")));
+
+// app.use(express.static(path.join(__dirname, "public")));
 
 var trangchuRouter= require('./routes/trangchu.route');
 var gioithieuRouter= require('./routes/gioithieu.route');
@@ -70,7 +71,7 @@ app.get('/yeu-cau', function(req, res) {
   });
 app.set("views", path.join(__dirname, "views"));
 
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
 
 
 
@@ -80,6 +81,7 @@ app.use(cookieParser("sdfas"));
 
 
 app.use(express.static('public'));
+
 app.listen(port, function() {
   console.log('Server listening on port ' + port);
 });
