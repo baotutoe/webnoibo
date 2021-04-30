@@ -269,12 +269,15 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
                                         span.price.product-price= lichgapmat.ghichu
                                 .summary_grid
                                     .rte.description.text2line= lichgapmat.noidung
+                                .summary_grid
+                                    .rte.description.text2line= lichgapmat.ngayhen   
+                                    .rte.description.text2line= lichgapmat.giohen 
                                 .product-action.clearfix
                                     form.variants.form-nut-grid(action="#" method="post" data-id="product-actions-15891413" enctype="multipart/form-data")
                                         div
                                             a.btn-circle.btn_view.btn.right-to.btn_base.btn_dkhoc.btn_thue(title="Đăng ký")
                                                 | lựa chọn
-                                            a.btn-circle.btn_view.btn.right-to.btn_base(title="Xem chi tiết" onclick="window.location.href='/vat-ly-lop-11'")
+                                            a.btn-circle.btn_view.btn.right-to.btn_base(title="Xem chi tiết" href=`/chitietlichhen/${lichgapmat.id}`)
                                                 | Chi tiết
     .text-right
     #open-filters.open-filters.hidden-lg

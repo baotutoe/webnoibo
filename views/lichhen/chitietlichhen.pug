@@ -4,7 +4,7 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
     meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
     title
-      | Kết Nối Đam Mê
+      | Chi Tiết Lịch Hẹn
       | Cu.BaQ
     // ================= Page description ==================
     meta(name="description" content="aa")
@@ -222,13 +222,13 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
     .breadcrumb_background
       .title_full
         .container.a-center
-          p.title_page Kết Nối Đam Mê
+          p.title_page  Chi Tiết Lịch Hẹn
     
     section.product.f-left.w_100(itemscope="" itemtype="https://schema.org/Product")
       .details-product.wrap_background.padding-top-20
         .container
           .row
-          each ctproduct in ctproducts
+          each lichgapmat in lichgapmats
             .product-detail-left.product-images.col-xs-12.col-sm-6.col-md-6.col-lg-6
               .col_large_default.large-image
                 a(href="images/anhnhac.jpg" data-rel="prettyPhoto[product-gallery]")
@@ -274,11 +274,14 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
                     span.status_name 
                 .price-box
                   .special-price
-                    span.price.product-price= ctproduct.tieude
+                    span.price.product-price= lichgapmat.tieude
               .product-summary.product_description.margin-bottom-0
-                .rte.description= ctproduct.ghichu
+                .rte.description= lichgapmat.ghichu
               .product-summary.product_description.margin-bottom-0
-                .rte.description= ctproduct.noidung
+                .rte.description= lichgapmat.noidung
+              .product-summary.product_description.margin-bottom-0
+                .rte.description= lichgapmat.ngayhen
+                .rte.description= lichgapmat.giohen
               .form-product.col-sm-12
                 .button_actions.clearfix
                         button.btn.btn_base.btn_thue

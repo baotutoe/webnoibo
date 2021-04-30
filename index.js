@@ -36,19 +36,22 @@ var chitietketnoidammeRouter= require('./routes/chitietketnoidamme.route');
 
 
 
-app.use('/',trangchuRouter);
-app.use('/gioithieu',gioithieuRouter);
-app.use('/login',dangnhapRouter);
-app.use('/dangky-t-k',dangkytkRouter);
-app.use('/dangkyyeucau',dangkyyeucauRouter);
-app.use('/thaytro',thaytroRouter);
-app.use('/dangxuat',dangxuatRouter);
-app.use('/ketnoidamme',ketnoidammeRouter);
-app.use('/khoanhkhacdangnho',khoanhkhacdangnhoRouter);
-app.use('/taikhoan',taikhoanRouter);
-app.use('/dangkylichhen',dangkylichhenRouter);
-app.use('/lichhen',lichhenRouter);
-app.use('/chitietketnoidamme',chitietketnoidammeRouter);
+app.use('/',trangchuRouter)
+app.use('/gioithieu',gioithieuRouter)
+app.use('/login',dangnhapRouter)
+app.use('/dangky-t-k',dangkytkRouter)
+app.use('/dangkyyeucau',dangkyyeucauRouter)
+app.use('/thaytro',thaytroRouter)
+app.use('/dangxuat',dangxuatRouter)
+app.use('/ketnoidamme',ketnoidammeRouter)
+app.use('/khoanhkhacdangnho',khoanhkhacdangnhoRouter)
+app.use('/taikhoan',taikhoanRouter)
+app.use('/dangkylichhen',dangkylichhenRouter)
+app.use('/lichhen',lichhenRouter)
+app.use('/chitietketnoidamme',chitietketnoidammeRouter)
+app.use('/chitietthaytro',thaytroRouter)
+app.use('/chitietlichhen',lichhenRouter)
+
 
 
 

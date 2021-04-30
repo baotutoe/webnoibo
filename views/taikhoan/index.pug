@@ -34,24 +34,29 @@ html(lang="en")
   
     script(type="text/javascript").
       $(document).ready(function() {
-      $('a.login-window').click(function() {
-      //lấy giá trị thuộc tính href - chính là phần tử "#login-box"
-      var loginBox = $(this).attr('href');
-      //cho hiện hộp đăng nhập trong 300ms
-      $(loginBox).fadeIn(300);
-      // thêm phần tử id="over" vào sau body
-      $('body').append('<div id="over">');
-      $('#over').fadeIn(300);
-      return false;
+        $(document).on('click', "a.close, #over", function() {
+          $('#over, .login').fadeOut(300 , function() {
+           $('#over').remove();  
+          });
+          return false;
+        });
       });
-      // khi click đóng hộp thoại
-      $(document).on('click', "a.close, #over", function() {
-      $('#over, .login').fadeOut(300 , function() {
-      $('#over').remove();
-      });
-      return false;
-      });
-      });
+
+    script(type="text/javascript").
+        let productId;
+        function edit(productId){
+          console.log(productId);
+          this.productId = productId;
+          console.log(this.productId);
+
+          let editFormId =  "#"+productId;
+          //cho hiện hộp cập trong 300ms
+          $(editFormId).fadeIn(300);
+          // thêm phần tử id="over" vào sau body
+          $('body').append('<div id="over">');
+          $('#over').fadeIn(300);
+          return false;
+        }
 
     .page-wrapper
       // HEADER MOBILE
@@ -197,7 +202,7 @@ html(lang="en")
                           td.desc= product.noidung
                           td
                             .table-data-feature
-                              a.item(class="login-window button" href="#login-box" data-toggle="tooltip" data-placement="top" title="Edit")
+                              a.item(class="login-window button" onClick='edit(\"'+product.id+'\")' data-toggle="tooltip" data-placement="top" title="Edit")
                                 i.zmdi.zmdi-edit
                               a.item(data-toggle="tooltip" data-placement="top" title="Delete")
                                 i.zmdi.zmdi-delete
@@ -215,40 +220,40 @@ html(lang="en")
                         | Cựu học sinh 
                         a(href="#" rel="nofollow" title="Sapo" target="_blank") THPT Đồng Lộc
                         | .
-    #login-box.login
-      .card
-        .card-header
-          strong Chỉnh Sửa
-          |  Dử Liệu
-        .card-body.card-block
-          form.form-horizontal(action="/taikhoan" method="POST" )
-           each product in products
-            .row.form-group
-              .col.col-md-3
-                label.form-control-label ID
-              .col-12.col-md-9
-                p.form-control-static(name="id")= product._id
-            .row.form-group
-              .col.col-md-3
-                label.form-control-label(for="Tiêu Đề") Tiêu Đề
-              .col-12.col-md-9
-                input#text-input.form-control(type="text" name="tieude2" placeholder="Text")
-                small.form-text.text-muted 
-            .row.form-group
-              .col.col-md-3
-                label.form-control-label(for="Ghi Chú") Ghi Chú
-              .col-12.col-md-9
-                input#email-input.form-control(name="ghichu2" placeholder="Text")
-                small.help-block.form-text 
-            .row.form-group
-              .col.col-md-3
-                label.form-control-label(for="Nội Dung") Nội Dung
-              .col-12.col-md-9
-                textarea#textarea-input.form-control(name="noidung2" rows="9" placeholder="Content...")
-            .card-footer
-            button.btn.btn-primary.btn-sm(type="submit")
-                i.fa.fa-dot-circle-o
-                |  Submit
+    each product in products
+      div.login(id=product.id)
+        .card
+          .card-header
+            strong Chỉnh Sửa
+            |  Dử Liệu
+          .card-body.card-block
+              form.form-horizontal(action="/taikhoan" method="POST")
+                .row.form-group
+                  .col.col-md-3
+                    label.form-control-label ID
+                  .col-12.col-md-9
+                    p.form-control-static(name="id")= product.id
+                .row.form-group
+                  .col.col-md-3
+                    label.form-control-label(for="Tiêu Đề") Tiêu Đề
+                  .col-12.col-md-9
+                    input#text-input.form-control(type="text" name="tieude2" placeholder="Text" value=product.tieude)
+                    small.form-text.text-muted 
+                .row.form-group
+                  .col.col-md-3
+                    label.form-control-label(for="Ghi Chú") Ghi Chú
+                  .col-12.col-md-9
+                    input#email-input.form-control(name="ghichu2" placeholder="Text" value=product.ghichu)
+                    small.help-block.form-text 
+                .row.form-group
+                  .col.col-md-3
+                    label.form-control-label(for="Nội Dung") Nội Dung
+                  .col-12.col-md-9
+                    textarea#textarea-input.form-control(name="noidung2" rows="9" placeholder="Content...")=product.noidung
+                .card-footer
+                button.btn.btn-primary.btn-sm(type="submit")
+                    i.fa.fa-dot-circle-o
+                    |  Submit
     // Jquery JS
     script(src="vendor/jquery-3.2.1.min.js")
     // Bootstrap JS

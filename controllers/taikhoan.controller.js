@@ -25,13 +25,30 @@ const insertUc = async (tieude, ghichu, noidung) => {
 		//throw error
 	}
   };
+
+  const updateUc = async (id, tieude, ghichu, noidung) => {
+	try {
+		const newProduct = Product.findById(id);
+		newProduct.tieude = tieude;
+		newProduct.ghichu = ghichu;
+		newProduct.noidung = noidung;   
+		await newProduct.save();
+	} catch(error) {
+		// console.log(error);
+		if (error.code === 11000) {
+		  throw "Lỗi";
+		}
+		//throw error
+	}
+  };
+
 module.exports.update=  async function(req, res){
 
 	try {
-	  let {tieude2, ghichu2, noidung2} = req.body;
+	  let {id, tieude2, ghichu2, noidung2} = req.body;
 	//   console.log(tieude2);
-		await insertUc(tieude2, ghichu2, noidung2);
-		res.redirect('/yeu-cau');
+		await updateUc(id, tieude2, ghichu2, noidung2);
+		res.redirect('/taikhoan');
 	} catch(error) {
 	  console.log(error);
 	  res.render('taikhoan/index', {
