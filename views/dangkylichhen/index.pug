@@ -1066,7 +1066,7 @@ html.supernova(lang='en-US')
       setTimeout(function() {
       JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"Request a Photographer","type":"control_head"},{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},{"name":"requestedMedia","qid":"3","text":"Requested Media","type":"control_radio"},{"name":"fullName","qid":"4","text":"Full Name","type":"control_fullname"},{"name":"email","qid":"5","text":"Email","type":"control_email"},{"name":"location","qid":"6","text":"Location","type":"control_textbox"},null,null,null,null,{"name":"sepecialInstructions","qid":"11","text":"Sepecial Instructions","type":"control_textarea"},null,{"name":"eventStarts13","qid":"13","text":"Event Starts","type":"control_datetime"},{"name":"eventEnds14","qid":"14","text":"Event Ends","type":"control_datetime"}]);}, 20);
   body
-    form#202943824514455.jotform-form(action='https://submit.jotform.com/submit/202943824514455/', method='post', name='form_202943824514455', accept-charset='utf-8', autocomplete='on')
+    form#202943824514455.jotform-form(action='/dangkylichhen', method='post', name='form_202943824514455', accept-charset='utf-8', autocomplete='on')
       input(type='hidden', name='formID', value='202943824514455')
       input#JWTContainer(type='hidden', value='')
       input#cardinalOrderNumber(type='hidden', value='')
@@ -1082,42 +1082,42 @@ html.supernova(lang='en-US')
             .form-input-wide(id='cid_4')
               div(data-wrapper-react='true')
                 span.form-sub-label-container(style='vertical-align:top', data-input-type='first')
-                  input.form-textbox(type='text', id='first_4', name='q4_fullName[first]', size='10', value='', placeholder='Họ và tên', data-component='first', aria-labelledby='label_4')
+                  input.form-textbox(type='text', id='first_4', name='name', size='10', value='', placeholder='Họ và tên', data-component='first', aria-labelledby='label_4')
                 span.form-sub-label-container(style='vertical-align:top', data-input-type='last')
-                  input.form-textbox(type='text', id='last_4', name='q4_fullName[last]', size='15', value='', placeholder='Lớp', data-component='last', aria-labelledby='label_4')
+                  input.form-textbox(type='text', id='last_4', name='lop', size='15', value='', placeholder='Lớp', data-component='last', aria-labelledby='label_4')
           li.form-line(data-type='control_email', id='id_5')
             label.form-label.form-label-top.form-label-auto(id='label_5', for='input_5')  Email 
             .form-input-wide(id='cid_5')
-              input.form-textbox.validate(type='email', id='input_5', name='q5_email', size='30', value='', placeholder='example@example.com', data-component='email', aria-labelledby='label_5')
+              input.form-textbox.validate(type='email', id='input_5', name='email', size='30', value='', placeholder='example@example.com', data-component='email', aria-labelledby='label_5')
           li.form-line(data-type='control_textbox', id='id_6')
             label.form-label.form-label-top.form-label-auto(id='label_6', for='input_6')  Lý do đăng ký 
             .form-input-wide(id='cid_6')
-              input.form-textbox(type='text', id='input_6', name='q6_location', data-type='input-textbox', size='20', value='', placeholder='Lý do đăng ký ', data-component='textbox', aria-labelledby='label_6')
+              input.form-textbox(type='text', id='input_6', name='lido', data-type='input-textbox', size='20', value='', placeholder='Lý do đăng ký ', data-component='textbox', aria-labelledby='label_6')
           li.form-line.allowTime(data-type='control_datetime', id='id_13')
             label.form-label.form-label-top.form-label-auto(id='label_13', for='lite_mode_13')  bắt đầu 
             .form-input-wide(id='cid_13')
               .extended(data-wrapper-react='true')
                 div(style='display:none')
                   span.form-sub-label-container(style='vertical-align:top')
-                    input.form-textbox.validate(type='tel', id='month_13', name='q13_eventStarts13[month]', size='2', data-maxlength='2', maxLength='2', value='', autoComplete='off', aria-labelledby='label_13 sublabel_13_month')
+                    input.form-textbox.validate(type='tel', id='month_13', name='batdau[month]', size='2', data-maxlength='2', maxLength='2', value='', autoComplete='off', aria-labelledby='label_13 sublabel_13_month')
                     span.date-separate(aria-hidden='true')
                       | /
                     label.form-sub-label(for='month_13', id='sublabel_13_month', style='min-height:13px', aria-hidden='false')  Ay 
                   span.form-sub-label-container(style='vertical-align:top')
-                    input.form-textbox.validate(type='tel', id='day_13', name='q13_eventStarts13[day]', size='2', data-maxlength='2', maxLength='2', value='', autoComplete='off', aria-labelledby='label_13 sublabel_13_day')
+                    input.form-textbox.validate(type='tel', id='day_13', name='batdau[day]', size='2', data-maxlength='2', maxLength='2', value='', autoComplete='off', aria-labelledby='label_13 sublabel_13_day')
                     span.date-separate(aria-hidden='true')
                       | /
                     label.form-sub-label(for='day_13', id='sublabel_13_day', style='min-height:13px', aria-hidden='false')  Gün 
                   span.form-sub-label-container(style='vertical-align:top')
-                    input.form-textbox.validate(type='tel', id='year_13', name='q13_eventStarts13[year]', size='4', data-maxlength='4', data-age='', maxLength='4', value='', autoComplete='off', aria-labelledby='label_13 sublabel_13_year')
+                    input.form-textbox.validate(type='tel', id='year_13', name='batdau[year]', size='4', data-maxlength='4', data-age='', maxLength='4', value='', autoComplete='off', aria-labelledby='label_13 sublabel_13_year')
                     label.form-sub-label(for='year_13', id='sublabel_13_year', style='min-height:13px', aria-hidden='false')  Yıl 
                 span.form-sub-label-container(style='vertical-align:top')
-                  input.form-textbox.validate(type='text', id='lite_mode_13', size='12', data-maxlength='12', maxLength='12', data-age='', value='', data-format='mmddyyyy', data-seperator='/', placeholder='mm/dd/yyyy', autoComplete='off', aria-labelledby='label_13')
+                  input.form-textbox.validate(type='text', name='ngayhen',id='lite_mode_13', size='12', data-maxlength='12', maxLength='12', data-age='', value='', data-format='mmddyyyy', data-seperator='/', placeholder='mm/dd/yyyy', autoComplete='off', aria-labelledby='label_13')
                   img.showAutoCalendar.newDefaultTheme-dateIcon.icon-liteMode(alt='Pick a Date', id='input_13_pick', src='https://cdn.jotfor.ms/images/calendar.png', data-component='datetime', aria-hidden='true', data-allow-time='Yes', data-version='v1')
                   label.form-sub-label(for='lite_mode_13', id='sublabel_13_litemode', style='min-height:13px', aria-hidden='false')
                 span.allowTime-container
                   span.form-sub-label-container(style='vertical-align:top')
-                    select.currentTime.time-dropdown.form-dropdown.validate(id='hour_13', name='q13_eventStarts13[hour]', aria-labelledby='label_13')
+                    select.currentTime.time-dropdown.form-dropdown.validate(id='hour_13', name='giohen', aria-labelledby='label_13')
                       option
                       option(value='1')  1 
                       option(value='2')  2 
@@ -1135,7 +1135,7 @@ html.supernova(lang='en-US')
                       | :
                     label.form-sub-label(for='hour_13', id='sublabel_13_hour', style='min-height:13px', aria-hidden='false')
                   span.form-sub-label-container(style='vertical-align:top')
-                    select.time-dropdown.form-dropdown.validate(id='min_13', name='q13_eventStarts13[min]', aria-labelledby='label_13')
+                    select.time-dropdown.form-dropdown.validate(id='min_13', name='phuthen', aria-labelledby='label_13')
                       option
                       option(value='00')  00 
                       option(value='10')  10 
@@ -1145,7 +1145,7 @@ html.supernova(lang='en-US')
                       option(value='50')  50 
                     label.form-sub-label(for='min_13', id='sublabel_13_minutes', style='min-height:13px', aria-hidden='false')
                   span.form-sub-label-container(style='vertical-align:top')
-                    select.time-dropdown.form-dropdown.validate(id='ampm_13', name='q13_eventStarts13[ampm]', aria-labelledby='label_13 sublabel_13_ampm')
+                    select.time-dropdown.form-dropdown.validate(id='ampm_13', name='checkgio', aria-labelledby='label_13 sublabel_13_ampm')
                       option(selected='', value='AM')  AM 
                       option(value='PM')  PM 
                     label.form-sub-label(for='ampm_13', id='sublabel_13_ampm', style='border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap', aria-hidden='false')  AM/PM Option 
@@ -1155,25 +1155,25 @@ html.supernova(lang='en-US')
               .extended(data-wrapper-react='true')
                 div(style='display:none')
                   span.form-sub-label-container(style='vertical-align:top')
-                    input.form-textbox.validate(type='tel', id='month_14', name='q14_eventEnds14[month]', size='2', data-maxlength='2', maxLength='2', value='', autoComplete='off', aria-labelledby='label_14 sublabel_14_month')
+                    input.form-textbox.validate(type='tel', id='month_14', name='ketthuc[month]', size='2', data-maxlength='2', maxLength='2', value='', autoComplete='off', aria-labelledby='label_14 sublabel_14_month')
                     span.date-separate(aria-hidden='true')
                       | /
                     label.form-sub-label(for='month_14', id='sublabel_14_month', style='min-height:13px', aria-hidden='false')  Ay 
                   span.form-sub-label-container(style='vertical-align:top')
-                    input.form-textbox.validate(type='tel', id='day_14', name='q14_eventEnds14[day]', size='2', data-maxlength='2', maxLength='2', value='', autoComplete='off', aria-labelledby='label_14 sublabel_14_day')
+                    input.form-textbox.validate(type='tel', id='day_14', name='ketthuc[day]', size='2', data-maxlength='2', maxLength='2', value='', autoComplete='off', aria-labelledby='label_14 sublabel_14_day')
                     span.date-separate(aria-hidden='true')
                       | /
                     label.form-sub-label(for='day_14', id='sublabel_14_day', style='min-height:13px', aria-hidden='false')  Gün 
                   span.form-sub-label-container(style='vertical-align:top')
-                    input.form-textbox.validate(type='tel', id='year_14', name='q14_eventEnds14[year]', size='4', data-maxlength='4', data-age='', maxLength='4', value='', autoComplete='off', aria-labelledby='label_14 sublabel_14_year')
+                    input.form-textbox.validate(type='tel', id='year_14', name='ketthuc[year]', size='4', data-maxlength='4', data-age='', maxLength='4', value='', autoComplete='off', aria-labelledby='label_14 sublabel_14_year')
                     label.form-sub-label(for='year_14', id='sublabel_14_year', style='min-height:13px', aria-hidden='false')  Yıl 
                 span.form-sub-label-container(style='vertical-align:top')
-                  input.form-textbox.validate(type='text', id='lite_mode_14', size='12', data-maxlength='12', maxLength='12', data-age='', value='', data-format='mmddyyyy', data-seperator='/', placeholder='mm/dd/yyyy', autoComplete='off', aria-labelledby='label_14')
+                  input.form-textbox.validate(type='text',name='ngaykt', id='lite_mode_14', size='12', data-maxlength='12', maxLength='12', data-age='', value='', data-format='mmddyyyy', data-seperator='/', placeholder='mm/dd/yyyy', autoComplete='off', aria-labelledby='label_14')
                   img.showAutoCalendar.newDefaultTheme-dateIcon.icon-liteMode(alt='Pick a Date', id='input_14_pick', src='https://cdn.jotfor.ms/images/calendar.png', data-component='datetime', aria-hidden='true', data-allow-time='Yes', data-version='v1')
                   label.form-sub-label(for='lite_mode_14', id='sublabel_14_litemode', style='min-height:13px', aria-hidden='false')
                 span.allowTime-container
                   span.form-sub-label-container(style='vertical-align:top')
-                    select.currentTime.time-dropdown.form-dropdown.validate(id='hour_14', name='q14_eventEnds14[hour]', aria-labelledby='label_14')
+                    select.currentTime.time-dropdown.form-dropdown.validate(id='hour_14', name='giokt', aria-labelledby='label_14')
                       option
                       option(value='1')  1 
                       option(value='2')  2 
@@ -1191,7 +1191,7 @@ html.supernova(lang='en-US')
                       | :
                     label.form-sub-label(for='hour_14', id='sublabel_14_hour', style='min-height:13px', aria-hidden='false')
                   span.form-sub-label-container(style='vertical-align:top')
-                    select.time-dropdown.form-dropdown.validate(id='min_14', name='q14_eventEnds14[min]', aria-labelledby='label_14')
+                    select.time-dropdown.form-dropdown.validate(id='min_14', name='phutkt', aria-labelledby='label_14')
                       option
                       option(value='00')  00 
                       option(value='10')  10 
@@ -1201,14 +1201,14 @@ html.supernova(lang='en-US')
                       option(value='50')  50 
                     label.form-sub-label(for='min_14', id='sublabel_14_minutes', style='min-height:13px', aria-hidden='false')
                   span.form-sub-label-container(style='vertical-align:top')
-                    select.time-dropdown.form-dropdown.validate(id='ampm_14', name='q14_eventEnds14[ampm]', aria-labelledby='label_14 sublabel_14_ampm')
+                    select.time-dropdown.form-dropdown.validate(id='ampm_14', name='checkkt', aria-labelledby='label_14 sublabel_14_ampm')
                       option(selected='', value='AM')  AM 
                       option(value='PM')  PM 
                     label.form-sub-label(for='ampm_14', id='sublabel_14_ampm', style='border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap', aria-hidden='false')  AM/PM Option 
           li.form-line(data-type='control_textarea', id='id_11')
             label.form-label.form-label-top.form-label-auto(id='label_11', for='input_11')  Nội dung 
             .form-input-wide(id='cid_11')
-              textarea.form-textarea(id='input_11', name='q11_sepecialInstructions', cols='66', rows='6', data-component='textarea', aria-labelledby='label_11')
+              textarea.form-textarea(id='input_11', name='noidung', cols='66', rows='6', data-component='textarea', aria-labelledby='label_11')
           li.form-line(data-type='control_button', id='id_2')
             .form-input-wide(id='cid_2')
               .form-buttons-wrapper.form-buttons-auto.jsTest-button-wrapperField(style='margin-left:156px', data-align='auto')

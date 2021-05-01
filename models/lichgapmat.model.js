@@ -1,11 +1,13 @@
 var mongoose = require('mongoose');
 
 var productSchema  = new mongoose.Schema({
-	tieude: String,
-	ghichu: String,
-    noidung: String,
+	hoten: String,
+	lop: String,
+    email: String,
     ngayhen: String,
-    giohen: String
+    ngaykt: String,
+    noidung: String,
+    lido: String
 });
 
 var lichgapmat = mongoose.model('lichgapmat', productSchema ,  'lichgapmat');

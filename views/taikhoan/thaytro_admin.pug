@@ -179,7 +179,7 @@ html(lang="en")
               .row
                 .col-md-12
                   // DATA TABLE
-                  h3.title-5.m-b-35 Kết Nối Đam Mê
+                  h3.title-5.m-b-35 Khoảnh Khác Đáng Nhớ
                   .table-responsive.table-responsive-data2
                     table.table.table-data2
                       thead
@@ -208,7 +208,7 @@ html(lang="en")
                             .table-data-feature
                               a.item(class="login-window button" onClick='edit(\"'+product.id+'\")' data-toggle="tooltip" data-placement="top" title="Edit")
                                 i.zmdi.zmdi-edit
-                              a.item(data-toggle="tooltip" href=`/taikhoan/delete/${product.id}` data-placement="top" title="Delete")
+                              a.item(data-toggle="tooltip" href=`/taikhoan/deletett/${product.id}` data-placement="top" title="Delete")
                                 i.zmdi.zmdi-delete
                               a.item(data-toggle="tooltip" data-placement="top" title="More")
                                 i.zmdi.zmdi-more
@@ -231,7 +231,7 @@ html(lang="en")
             strong Chỉnh Sửa
             |  Dử Liệu
           .card-body.card-block
-              form.form-horizontal(action="/taikhoan" method="POST")
+              form.form-horizontal(action="/taikhoan/tt" method="POST")
                 .row.form-group
                   .col.col-md-3
                     label.form-control-label ID

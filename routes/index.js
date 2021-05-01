@@ -24,7 +24,7 @@ router.use('/dang-nhap', mid.loggedOut, dangnhapRouter)
 router.use('/dangky-t-k', mid.loggedOut, dangkytkRouter)
 
 // private
-router.use('/', mid.requiresLogin, trangchuRouter)
+router.use('/', trangchuRouter)
 router.use('/gioithieu', mid.requiresLogin, gioithieuRouter)
 router.use('/dangkyyeucau', mid.requiresLogin, dangkyyeucauRouter)
 router.use('/thaytro', mid.requiresLogin, thaytroRouter)
@@ -36,5 +36,8 @@ router.use('/lichhen', mid.requiresLogin, lichhenRouter)
 router.use('/chitietketnoidamme', mid.requiresLogin, chitietketnoidammeRouter)
 router.use('/chitietthaytro', mid.requiresLogin, thaytroRouter)
 router.use('/chitietlichhen', mid.requiresLogin, lichhenRouter)
+router.use('/kkdn', mid.requiresLogin, taikhoanRouter)
+router.use('/lh', mid.requiresLogin, taikhoanRouter)
+router.use('/tt', mid.requiresLogin, taikhoanRouter)
 
 module.exports = router;

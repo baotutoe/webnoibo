@@ -61,7 +61,8 @@ module.exports.index = function(req, res) {
   res.render('dangkyyeucau/index');
 };
 module.exports.create=  async function(req, res){
-
+  let userId = req.session.userId;
+  console.log(userId);
   try {
     let {tieude, ghichu, noidung,chude} = req.body;
     console.log(tieude);

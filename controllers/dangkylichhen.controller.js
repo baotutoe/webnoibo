@@ -5,38 +5,40 @@ const bcrypt = require('bcrypt');
 
 
 
-const insertUc = async (tieude, ghichu, noidung,ngayhen,giohen) => {
-    try {
-      const newlichgapmat = new lichgapmat();
-      newlichgapmat.tieude = tieude;
-      newlichgapmat.ghichu = ghichu;
-      newlichgapmat.noidung = noidung;   
-      newlichgapmat.ngayhen = ngayhen;   
-      newlichgapmat.giohen = giohen;   
-      await newlichgapmat.save();
-  } catch(error) {
-      // console.log(error);
-      if (error.code === 11000) {
-        throw "Lỗi";
-      }
-      //throw error
+const insertUc = async (hoten, lop, email, ngayhen, ngaykt,noidung,lido) => {
+  try {
+    const newlichgapmat = new lichgapmat()
+    newlichgapmat.hoten = hoten
+    newlichgapmat.lop = lop
+    newlichgapmat.email = email
+    newlichgapmat.ngayhen = ngayhen
+    newlichgapmat.ngaykt = ngaykt
+    newlichgapmat.noidung = noidung
+    newlichgapmat.lido = lido
+    await newlichgapmat.save()
+  } catch (error) {
+    // console.log(error);
+    if (error.code === 11000) {
+      throw "Lỗi"
+    }
+    //throw error
   }
 
-  
+
 };
-module.exports.index = function(req, res) {
+module.exports.index = function (req, res) {
   res.render('dangkylichhen/index');
 };
-module.exports.create=  async function(req, res){
+module.exports.create = async function (req, res) {
 
   try {
-    let {tieude, ghichu, noidung,ngayhen,giohen} = req.body;
-      await insertUc(tieude, ghichu, noidung,ngayhen,giohen);
-      res.redirect('/yeu-cau');
-  } catch(error) {
+    let body = req.body,hoten = body.name,lop= body.lop, email=body.email, ngayhen =body.ngayhen +'-'+ body.giohen +':'+ body.phuthen+'-'+body.checkgio,ngaykt =body.ngaykt +'-'+ body.giokt +':'+ body.phutkt+'-'+body.checkkt,noidung=body.noidung,lido=body.lido
+    await insertUc( hoten, lop, email, ngayhen,ngaykt,noidung,lido)
+    res.redirect('/yeu-cau');
+  } catch (error) {
     console.log(error);
     res.render('dangkylichhen/index', {
       // lopmoi: req.body
-  });
+    });
   }
-};  
+};
