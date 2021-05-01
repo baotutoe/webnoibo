@@ -1,8 +1,10 @@
-var express = require('express');
+let express = require('express');
+let router = express.Router();
+let mid = require('../middlewares');
 
-var controller = require('../controllers/dangnhap.controller');
-var router = express.Router();
+let controller = require('../controllers/dangnhap.controller');
 
-router.get('/', controller.index);
+router.get('/', mid.loggedOut, controller.index);
 router.post('/', controller.check);
+
 module.exports = router;

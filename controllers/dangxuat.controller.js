@@ -1,5 +1,11 @@
-module.exports.logout = function(req, res) {
-    res.clearCookie('email');
-    // res.redirect('/dang-nhap');
-    res.redirect('/dang-nhap');
-  }; 
+module.exports.logout = function (req, res) {
+    if (req.session) {
+        req.session.destroy(function (err) {
+            if (err) {
+                return next(err);
+            } else {
+                return res.redirect('/');
+            }
+        });
+    }
+};

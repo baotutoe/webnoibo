@@ -1,8 +1,6 @@
-var express = require('express');
-
-var controller = require('../controllers/trangchu.controller');
-
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let controller = require('../controllers/trangchu.controller');
 
 router.get('/', controller.index);
 
