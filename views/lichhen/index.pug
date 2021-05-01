@@ -260,18 +260,19 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
                                     span.image_author
                                         img(src="images/feel_1.png" alt="Avatar giáo viên")
                                     .r_name
-                                        span.name_author Nguyễn Tuấn Minh
-                                        span.job_author Giáo viên cấp 3
+                                        span.name_author= lichgapmat.hoten
+                                        span.job_author= lichgapmat.lop
                                 h3.product-name
-                                    a(href="#" title="Vật lý lớp 11")= lichgapmat.tieude
+                                    a(href="#" title="Vật lý lớp 11") sssss
                                 .price-box.clearfix
                                     .special-price
-                                        span.price.product-price= lichgapmat.ghichu
+                                        span.price.product-price= lichgapmat.lido
                                 .summary_grid
                                     .rte.description.text2line= lichgapmat.noidung
                                 .summary_grid
+                                    .rte.description.text2line= lichgapmat.email
                                     .rte.description.text2line= lichgapmat.ngayhen   
-                                    .rte.description.text2line= lichgapmat.giohen 
+                                    .rte.description.text2line= lichgapmat.ngaykt 
                                 .product-action.clearfix
                                     form.variants.form-nut-grid(action="#" method="post" data-id="product-actions-15891413" enctype="multipart/form-data")
                                         div
@@ -288,15 +289,15 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
           .col-lg-12.col-md-12
             .wp_footer
               .new-letter.a-center
-                .col-lg-12.col-md-12.padding_
-                  .letter-left.heading
-                    h3 Nhập email
-                    span Để nhận tin tức mới của chúng tôi
-                  form#mc-embedded-subscribe-form(action="#" method="post" name="mc-embedded-subscribe-form" target="_blank")
-                    .input-group
-                      input#mail.form-control(type="email" autocomplete="off" value="" placeholder="Nhập email của bạn" name="EMAIL")
-                      span.input-group-btn
-                        button#subscribe.btn.btn-primary.button_gradient(name="subscribe" type="submit" title="Gửi ngay") Gửi ngay
+              //-   .col-lg-12.col-md-12.padding_
+              //-     .letter-left.heading
+              //-       h3 Nhập email
+              //-       span Để nhận tin tức mới của chúng tôi
+              //-     form#mc-embedded-subscribe-form(action="#" method="post" name="mc-embedded-subscribe-form" target="_blank")
+              //-       .input-group
+              //-         input#mail.form-control(type="email" autocomplete="off" value="" placeholder="Nhập email của bạn" name="EMAIL")
+              //-         span.input-group-btn
+              //-           button#subscribe.btn.btn-primary.button_gradient(name="subscribe" type="submit" title="Gửi ngay") Gửi ngay
               .mid-footer
                 .col-lg-1.hidden-md.hidden-sm.hidden-xs
                 .col-xs-12.col-sm-12.col-md-6.col-lg-4

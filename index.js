@@ -46,11 +46,19 @@ app.use('/dangxuat',dangxuatRouter)
 app.use('/ketnoidamme',ketnoidammeRouter)
 app.use('/khoanhkhacdangnho',khoanhkhacdangnhoRouter)
 app.use('/taikhoan',taikhoanRouter)
+app.use('/kkdn',taikhoanRouter)
+app.use('/lh',taikhoanRouter)
+
 app.use('/dangkylichhen',dangkylichhenRouter)
 app.use('/lichhen',lichhenRouter)
 app.use('/chitietketnoidamme',chitietketnoidammeRouter)
 app.use('/chitietthaytro',thaytroRouter)
 app.use('/chitietlichhen',lichhenRouter)
+app.use('/guimail',ketnoidammeRouter)
+
+
+
+
 
 
 

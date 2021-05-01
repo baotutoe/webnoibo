@@ -231,25 +231,25 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
           each lichgapmat in lichgapmats
             .product-detail-left.product-images.col-xs-12.col-sm-6.col-md-6.col-lg-6
               .col_large_default.large-image
-                a(href="images/anhnhac.jpg" data-rel="prettyPhoto[product-gallery]")
+                a(href="/images/noibat2.png" data-rel="prettyPhoto[product-gallery]")
                   .zoomWrapper(style="height:398px;width:555px;")
                     .zoomWrapper(style="height:398px;width:555px;")
-                      img#img_01.checkurl.img-responsive(src="/images/anhnhac.jpg"  style="position: absolute;")
+                      img#img_01.checkurl.img-responsive(src="/images/noibat2.png"  style="position: absolute;")
               #gallery_02.owl-carousel.owl-theme.thumbnail-product.thumb_product_details.not-dqowl.owl-loaded.owl-drag(data-loop="false" data-lg-items="3" data-md-items="3" data-sm-items="3" data-xs-items="3" data-xxs-items="3")
                 .owl-stage-outer.owl-height(style="height: 133px;")
                   .owl-stage(style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 424px;")
                     .owl-item.active(style="width: 131.25px; margin-right: 10px;")
                       .item
                         a(href="javascript:void(0)")
-                          img( src="/images/anhnhac.jpg"  alt="Vật lý lớp 11")
+                          img( src="/images/noibat2.png"  alt="Vật lý lớp 11")
                     .owl-item.active(style="width: 131.25px; margin-right: 10px;")
                       .item
                         a(href="javascript:void(0)")
-                          img( src="/images/anhnhac.jpg" alt="Vật lý lớp 11")
+                          img( src="/images/noibat2.png" alt="Vật lý lớp 11")
                     .owl-item.active(style="width: 131.25px; margin-right: 10px;")
                       .item
                         a(href="javascript:void(0)")
-                          img( src="/images/anhnhac.jpg" alt="Vật lý lớp 11")
+                          img( src="/images/noibat2.png" alt="Vật lý lớp 11")
                 .owl-nav.disabled
                   .owl-prev.disabled prev
                   .owl-next.disabled next
@@ -269,19 +269,18 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
                     div
                       img(src="images/user.png" width="18" height="17")
                 .group-status
-                  span.first_status
-                    | Học Sinh: 
-                    span.status_name 
+                  span.first_status= lichgapmat.hoten
+                  span.first_status  - 
+                  span.first_status= lichgapmat.lop
                 .price-box
                   .special-price
-                    span.price.product-price= lichgapmat.tieude
-              .product-summary.product_description.margin-bottom-0
+                    span.price.product-price= lichgapmat.lido
                 .rte.description= lichgapmat.ghichu
               .product-summary.product_description.margin-bottom-0
                 .rte.description= lichgapmat.noidung
               .product-summary.product_description.margin-bottom-0
                 .rte.description= lichgapmat.ngayhen
-                .rte.description= lichgapmat.giohen
+                .rte.description= lichgapmat.ngaykt
               .form-product.col-sm-12
                 .button_actions.clearfix
                         button.btn.btn_base.btn_thue
@@ -303,15 +302,15 @@ html.wf-fontawesome-n4-active.wf-active(lang="vi")
           .col-lg-12.col-md-12
             .wp_footer
               .new-letter.a-center
-                .col-lg-12.col-md-12.padding_
-                  .letter-left.heading
-                    h3 Nhập email
-                    span Để nhận tin tức mới của chúng tôi
-                  form#mc-embedded-subscribe-form(action="#" method="post" name="mc-embedded-subscribe-form" target="_blank")
-                    .input-group
-                      input#mail.form-control(type="email" autocomplete="off" value="" placeholder="Nhập email của bạn" name="EMAIL")
-                      span.input-group-btn
-                        button#subscribe.btn.btn-primary.button_gradient(name="subscribe" type="submit" title="Gửi ngay") Gửi ngay
+              //-   .col-lg-12.col-md-12.padding_
+              //-     .letter-left.heading
+              //-       h3 Nhập email
+              //-       span Để nhận tin tức mới của chúng tôi
+              //-     form#mc-embedded-subscribe-form(action="#" method="post" name="mc-embedded-subscribe-form" target="_blank")
+              //-       .input-group
+              //-         input#mail.form-control(type="email" autocomplete="off" value="" placeholder="Nhập email của bạn" name="EMAIL")
+              //-         span.input-group-btn
+              //-           button#subscribe.btn.btn-primary.button_gradient(name="subscribe" type="submit" title="Gửi ngay") Gửi ngay
               .mid-footer
                 .col-lg-1.hidden-md.hidden-sm.hidden-xs
                 .col-xs-12.col-sm-12.col-md-6.col-lg-4
