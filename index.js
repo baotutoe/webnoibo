@@ -48,6 +48,8 @@ app.use('/khoanhkhacdangnho',khoanhkhacdangnhoRouter)
 app.use('/taikhoan',taikhoanRouter)
 app.use('/kkdn',taikhoanRouter)
 app.use('/lh',taikhoanRouter)
+app.use('/tt',taikhoanRouter)
+
 
 app.use('/dangkylichhen',dangkylichhenRouter)
 app.use('/lichhen',lichhenRouter)

@@ -136,7 +136,7 @@ html(lang="en")
                   i.fas.fa-table
                   | Lịch hẹn
               li.active
-                a(href="/thaytro/admin")
+                a(href="/tt/admintt")
                   i.fas.fa-table
                   | Thầy Trò
       // END MENU SIDEBAR
@@ -251,29 +251,34 @@ html(lang="en")
                   .col.col-md-3
                     label.form-control-label(for="Tiêu Đề") Họ tên
                   .col-12.col-md-9
-                    input#text-input.form-control(type="text" name="tieude" placeholder="Text" value=product.hoten)
+                    input#text-input.form-control(type="text" name="name" placeholder="Text" value=product.hoten)
                     small.form-text.text-muted 
                   .col.col-md-3
                     label.form-control-label(for="Tiêu Đề") Lớp
                   .col-12.col-md-9
-                    input#text-input.form-control(type="text" name="tieude" placeholder="Text" value=product.lop)
+                    input#text-input.form-control(type="text" name="lop" placeholder="Text" value=product.lop)
                     small.form-text.text-muted 
                 .row.form-group
                   .col.col-md-3
                     label.form-control-label(for="Ghi Chú") Lí do
                   .col-12.col-md-9
-                    input#email-input.form-control(name="ghichu" placeholder="Text" value=product.lido)
+                    input#email-input.form-control(name="lido" placeholder="Text" value=product.lido)
+                    small.help-block.form-text 
+                  .col.col-md-3
+                    label.form-control-label(for="Ghi Chú") Email
+                  .col-12.col-md-9
+                    input#email-input.form-control(name="email" placeholder="Text" value=product.email)
                     small.help-block.form-text 
                 .row.form-group
                   .col.col-md-3
                     label.form-control-label(for="Ghi Chú") Ngày hẹn
                   .col-12.col-md-9
-                    input#email-input.form-control(name="ghichu" placeholder="Text" value=product.ngayhen)
+                    input#email-input.form-control(name="ngayhen" placeholder="Text" value=product.ngayhen)
                     small.help-block.form-text 
                   .col.col-md-3
                     label.form-control-label(for="Ghi Chú") Ngày Kết thúc
                   .col-12.col-md-9
-                    input#email-input.form-control(name="ghichu" placeholder="Text" value=product.ngaykt)
+                    input#email-input.form-control(name="ngaykt" placeholder="Text" value=product.ngaykt)
                     small.help-block.form-text 
                 .row.form-group
                   .col.col-md-3
