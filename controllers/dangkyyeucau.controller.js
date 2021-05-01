@@ -13,7 +13,7 @@ const insertUc = async (tieude, ghichu, noidung,chude) => {
   console.log(chude);
   if(chude=="ketnoidamme"){
     try {
-      const newProduct = new Bangmoi();
+      const newProduct = new Product();
       newProduct.tieude = tieude;
       newProduct.ghichu = ghichu;
       newProduct.noidung = noidung;   
