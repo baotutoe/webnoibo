@@ -31,12 +31,15 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 
 // for parsing application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', routes);
 
 app.use(errorHandler)
 
-app.listen(port, function () {
+let server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
 });
+
+let socket = require("./socket");
+socket(server);
