@@ -1,5 +1,5 @@
 module.exports = ROLES = {
-    "ADMIN": "ADMIN",
-    "TEACHER": "TEACHER",
-    "STUDENT": "STUDENT"
+    ADMIN: "ADMIN",
+    TEACHER: "TEACHER",
+    STUDENT: "STUDENT"
 };

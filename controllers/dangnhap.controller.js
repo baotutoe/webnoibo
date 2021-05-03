@@ -29,7 +29,10 @@ module.exports.check = async function (req, res, next) {
 
         }
 
-        req.session.userId = foundUser._id
+        req.session.userId = foundUser._id;
+        req.session.roles = foundUser.roles;
+        req.session.status = foundUser.status;
+
         res.redirect('/');
     } catch (error) {
         next(error);

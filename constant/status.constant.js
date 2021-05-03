@@ -1,5 +1,5 @@
 module.exports = status = {
-    "ACTIVE": "ACTIVE",
-    "INACTIVE": "INACTIVE",
-    "BLOCK": "BLOCK"
+    ACTIVE: "ACTIVE",
+    INACTIVE: "INACTIVE",
+    BLOCK: "BLOCK"
 };
