@@ -10,6 +10,11 @@ let session = require('express-session');
 let errorHandler = require('./middlewares/errorHandler')
 let routes = require('./routes/index');
 
+// const server = require('http').createServer(app);
+// const io = require('socket.io')(server);
+// let socket = require('./socket');
+// socket(io);
+
 app.set('view engine', 'pug');
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static('public'));

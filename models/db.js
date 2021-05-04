@@ -39,3 +39,4 @@ require('./hoidap.model');
 require('./lichgapmat.model');
 require('./bangmoi.model');
 require('./bangmoi2.model');
+require('./cmt.model');

@@ -43,13 +43,13 @@ html(lang="en")
       });
 
     script(type="text/javascript").
-        let productId;
-        function edit(productId){
-          console.log(productId);
-          this.productId = productId;
-          console.log(this.productId);
+        let userId;
+        function edit(userId){
+          console.log(userId);
+          this.userId = userId;
+          console.log(this.userId);
 
-          let editFormId =  "#"+productId;
+          let editFormId =  "#"+userId;
           //cho hiện hộp cập trong 300ms
           $(editFormId).fadeIn(300);
           // thêm phần tử id="over" vào sau body
@@ -188,36 +188,24 @@ html(lang="en")
                     table.table.table-data2
                       thead
                         tr
-                          //- th
-                          //-   label.au-checkbox
-                          //-     input(type="checkbox")
-                          //-     span.au-checkmark
                           th Họ tên
-                          th lớp
                           th Email
-                          th Lí do
-                          th Ngày hẹn
-                          th Nội dung
-                          th 
+                          th Quyền
+                          th Trạng thái
+                          th
                       tbody
-                      each product in products
+                      each user in users
                         tr.spacer
                         tr.tr-shadow
-                          td= product.hoten
-                          td= product.lop
-                          td
-                            span.block-email= product.email
-                          td
-                            span.block-email= product.lido
-                          td
-                            span.block-email= product.ngayhen
-                            span.block-email= product.ngaykt
-                          td.desc= product.noidung
+                          td= user.name
+                          td= user.email
+                          td Admin
+                          td block
                           td
                             .table-data-feature
-                              a.item(class="login-window button" onClick='edit(\"'+product.id+'\")' data-toggle="tooltip" data-placement="top" title="Edit")
+                              a.item(class="login-window button" onClick='edit(\"'+user.id+'\")' data-toggle="tooltip" data-placement="top" title="Edit")
                                 i.zmdi.zmdi-edit
-                              a.item(data-toggle="tooltip" href=`/taikhoan/deletelh/${product.id}` data-placement="top" title="Delete")
+                              a.item(data-toggle="tooltip" href=`/taikhoan/deletepq/${user.id}` data-placement="top" title="Delete")
                                 i.zmdi.zmdi-delete
                               a.item(data-toggle="tooltip" data-placement="top" title="More")
                                 i.zmdi.zmdi-more
@@ -233,58 +221,59 @@ html(lang="en")
                         | Cựu học sinh 
                         a(href="#" rel="nofollow" title="Sapo" target="_blank") THPT Đồng Lộc
                         | .
-    each product in products
-      div.login(id=product.id)
+    each user in users
+      div.login(id=user.id)
         .card
           .card-header
             strong Chỉnh Sửa
             |  Dử Liệu
           .card-body.card-block
-              form.form-horizontal(action="/taikhoan/lh" method="POST")
+              form.form-horizontal(action="/taikhoan/pq" method="POST")
                 .row.form-group
                   .col.col-md-3
                     label.form-control-label ID
                   .col-12.col-md-9
-                    p.form-control-static= product.id
-                    input#text-input.form-control(type="text" name="id" placeholder="Text" value=product.id hidden)
+                    p.form-control-static= user.id
+                    input#text-input.form-control(type="text" name="id" placeholder="Text" value=user.id hidden)
                 .row.form-group
                   .col.col-md-3
-                    label.form-control-label(for="Tiêu Đề") Họ tên
+                    label.form-control-label(for="Họ tên") Họ tên
                   .col-12.col-md-9
-                    input#text-input.form-control(type="text" name="name" placeholder="Text" value=product.hoten)
-                    small.form-text.text-muted 
-                  .col.col-md-3
-                    label.form-control-label(for="Tiêu Đề") Lớp
-                  .col-12.col-md-9
-                    input#text-input.form-control(type="text" name="lop" placeholder="Text" value=product.lop)
+                    input#text-input.form-control(type="text" name="name" placeholder="Text" value=user.name)
                     small.form-text.text-muted 
                 .row.form-group
                   .col.col-md-3
-                    label.form-control-label(for="Ghi Chú") Lí do
+                    label.form-control-label(for="email") email
                   .col-12.col-md-9
-                    input#email-input.form-control(name="lido" placeholder="Text" value=product.lido)
-                    small.help-block.form-text 
-                  .col.col-md-3
-                    label.form-control-label(for="Ghi Chú") Email
-                  .col-12.col-md-9
-                    input#email-input.form-control(name="email" placeholder="Text" value=product.email)
-                    small.help-block.form-text 
+                    input#email-input.form-control(name="email" placeholder="Text" value=user.email)
+                    small.help-block.form-text
                 .row.form-group
                   .col.col-md-3
-                    label.form-control-label(for="Ghi Chú") Ngày hẹn
+                    label.form-control-label(for="Quyền") Quyền
                   .col-12.col-md-9
-                    input#email-input.form-control(name="ngayhen" placeholder="Text" value=product.ngayhen)
-                    small.help-block.form-text 
-                  .col.col-md-3
-                    label.form-control-label(for="Ghi Chú") Ngày Kết thúc
-                  .col-12.col-md-9
-                    input#email-input.form-control(name="ngaykt" placeholder="Text" value=product.ngaykt)
-                    small.help-block.form-text 
+                    input#vehicle1(type='checkbox' name='vehicle1' value='admin')
+                    label(for='vehicle1') Admin
+                    br
+                    input#vehicle2(type='checkbox' name='vehicle2' value='giaovien')
+                    label(for='vehicle2')  Giáo viên
+                    br
+                    input#vehicle3(type='checkbox' name='vehicle3' value='hocsinh')
+                    label(for='vehicle3')  Học sinh
+                    br
                 .row.form-group
                   .col.col-md-3
-                    label.form-control-label(for="Nội Dung") Nội Dung
+                    label.form-control-label(for="Trạng thái") Trạng thái
                   .col-12.col-md-9
-                    textarea#textarea-input.form-control(name="noidung" rows="9" placeholder="Content...")=product.noidung
+                    select#cars(name='trangthai')
+                      option(value='duyet') Duyệt
+                      option(value='choduyet') Chờ duyệt
+                      option(value='chan') Chặn
+                .row.form-group
+                  .col.col-md-3
+                    label.form-control-label(for="Mật khẩu") Mật Khẩu
+                  .col-12.col-md-9
+                    input#email-input.form-control(name="matkhau" placeholder="Nhập mật khẩu mới" value=user.Password)
+                    small.help-block.form-text
                 .card-footer
                 button.btn.btn-primary.btn-sm(type="submit")
                     i.fa.fa-dot-circle-o

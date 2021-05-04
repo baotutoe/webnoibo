@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 var productSchema  = new mongoose.Schema({
 	tieude: String,
 	ghichu: String,
-	noidung: String
+	noidung: String,
+	userid : String
 });
 
 var Product_kkdnn = mongoose.model('Product_kkdn', productSchema ,  'Product_kkdn');

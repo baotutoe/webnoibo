@@ -7,7 +7,8 @@ var productSchema  = new mongoose.Schema({
     ngayhen: String,
     ngaykt: String,
     noidung: String,
-    lido: String
+    lido: String,
+    userid : String
 });
 
 var lichgapmat = mongoose.model('lichgapmat', productSchema ,  'lichgapmat');

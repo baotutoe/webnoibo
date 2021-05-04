@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 
 
-const insertUc = async (hoten, lop, email, ngayhen, ngaykt,noidung,lido) => {
+const insertUc = async (hoten, lop, email, ngayhen, ngaykt,noidung,lido,userid) => {
   try {
     const newlichgapmat = new lichgapmat()
     newlichgapmat.hoten = hoten
@@ -15,6 +15,8 @@ const insertUc = async (hoten, lop, email, ngayhen, ngaykt,noidung,lido) => {
     newlichgapmat.ngaykt = ngaykt
     newlichgapmat.noidung = noidung
     newlichgapmat.lido = lido
+    newlichgapmat.userid = userid
+
     await newlichgapmat.save()
   } catch (error) {
     // console.log(error);
@@ -32,9 +34,10 @@ module.exports.index = function (req, res) {
 module.exports.create = async function (req, res) {
 
   try {
+    let userid = req.session.userId
     let body = req.body,hoten = body.name,lop= body.lop, email=body.email, ngayhen =body.ngayhen +'-'+ body.giohen +':'+ body.phuthen+'-'+body.checkgio,ngaykt =body.ngaykt +'-'+ body.giokt +':'+ body.phutkt+'-'+body.checkkt,noidung=body.noidung,lido=body.lido
-    await insertUc( hoten, lop, email, ngayhen,ngaykt,noidung,lido)
-    res.redirect('/yeu-cau');
+    await insertUc( hoten, lop, email, ngayhen,ngaykt,noidung,lido,userid)
+    res.redirect('/lichhen');
   } catch (error) {
     console.log(error);
     res.render('dangkylichhen/index', {

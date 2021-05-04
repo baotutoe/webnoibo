@@ -3,10 +3,13 @@ const Product_kkdn = require('../models/product_kkdn.model')
 const mongoose = require('mongoose');
 const lichgapmat = mongoose.model('lichgapmat');
 const Hoidap = require('../models/hoidap.model');
+const user = require('../models/user.model');
+
 const Service = {
 	indexkkdn: async (req, res, next) => {
 		try {
-			const products = await Product_kkdn.find()
+			let userid = req.session.userId;
+			const products = await Product_kkdn.find({userid:userid})
 			res.render('taikhoan/khoanhkhacdangnho_admin', {
 				products: products
 			})
@@ -17,7 +20,8 @@ const Service = {
 	},
 	indexlh: async (req, res, next) => {
 		try {
-			const products = await lichgapmat.find()
+			let userid = req.session.userId;
+			const products = await lichgapmat.find({userid:userid})
 			res.render('taikhoan/lichhen_admin', {
 				products: products
 			})
@@ -28,7 +32,8 @@ const Service = {
 	},
 	indextt: async (req, res, next) => {
 		try {
-			const products = await Hoidap.find()
+			let userid = req.session.userId;
+			const products = await Hoidap.find({userid:userid})
 			res.render('taikhoan/thaytro_admin', {
 				products: products
 			})
@@ -37,9 +42,22 @@ const Service = {
 			next(err)
 		}
 	},
+	indexpq: async (req, res, next) => {
+		try {
+			const users = await user.find()
+			console.log(users)
+			res.render('taikhoan/phanquyen_admin', {
+				users: users
+			})
+		}
+		catch (err) {
+			next(err)
+		}
+	},
 	index: async (req, res, next) => {
 		try {
-			const products = await Product.find()
+			let userid = req.session.userId;
+			const products = await Product.find({userid:userid})
 			//   console.log(products);
 			res.render('taikhoan/index', {
 				products: products
@@ -51,16 +69,14 @@ const Service = {
 	},
 	update: async (req, res, next) => {
 		try {
+			let userid = req.session.userId;
 			const body = req.body, id = body.id, tieude = body.tieude, noidung = body.noidung, ghichu = body.ghichu
 			await Product.findByIdAndUpdate(id, {
 				tieude: tieude,
 				ghichu: ghichu,
 				noidung: noidung
 			})
-			let products = await Product.find()
-			res.render('taikhoan/index', {
-				products: products
-			})
+			res.redirect('/taikhoan')
 		}
 		catch (err) {
 			next(err)
@@ -74,10 +90,7 @@ const Service = {
 				ghichu: ghichu,
 				noidung: noidung
 			})
-			let products = await Hoidap.find()
-			res.render('taikhoan/thaytro_admin', {
-				products: products
-			})
+			res.redirect('/tt/admintt')
 		}
 		catch (err) {
 			next(err)
@@ -91,10 +104,7 @@ const Service = {
 				ghichu: ghichu,
 				noidung: noidung
 			})
-			let products = await Product_kkdn.find()
-			res.render('taikhoan/khoanhkhacdangnho_admin', {
-				products: products
-			})
+			res.redirect('/kkdn/adminkkdn')
 		}
 		catch (err) {
 			next(err)
@@ -112,10 +122,37 @@ const Service = {
 				noidung: noidung,
 				lido:lido
 			})
-			let products = await lichgapmat.find()
-			res.render('taikhoan/lichhen_admin', {
-				products: products
+			res.redirect('/lh/adminlh')
+
+		}
+		catch (err) {
+			next(err)
+		}
+	},
+	updatepq: async (req, res, next) => {
+		try {
+			let body = req.body,id = body.id,hoten = body.name,email= body.email, trangthai =body.trangthai,matkhau =body.matkhau,admin=body.vehicle1,giaovien=body.vehicle2,hocsinh=body.vehicle3
+			let quyen = []
+			if(admin){
+				quyen.push(admin)
+				console.log(quyen)
+
+			}
+			if(giaovien){
+				quyen.push(giaovien)
+				console.log(quyen)
+
+			}
+			if(hocsinh){
+				quyen.push(hocsinh)
+			}
+			await user.findByIdAndUpdate(id, {
+				name: hoten,
+				email: email,
+				quyen: quyen,
+				trangthai:trangthai
 			})
+			res.redirect('/pq/adminpq')
 		}
 		catch (err) {
 			next(err)
@@ -126,10 +163,7 @@ const Service = {
 			const body = req.params, id = body.id
 			console.log(id)
 			await Product.findByIdAndDelete(id)
-			let products = await Product.find()
-			res.render('taikhoan/index', {
-				products: products
-			})
+			res.redirect('/taikhoan')
 		}
 		catch (err) {
 			next(err)
@@ -140,10 +174,8 @@ const Service = {
 			const body = req.params, id = body.id
 			console.log(id)
 			await Product_kkdn.findByIdAndDelete(id)
-			let products = await Product_kkdn.find()
-			res.render('taikhoan/khoanhkhacdangnho_admin', {
-				products: products
-			})
+			res.redirect('/kkdn/adminkkdn')
+
 		}
 		catch (err) {
 			next(err)
@@ -154,10 +186,8 @@ const Service = {
 			const body = req.params, id = body.id
 			console.log(id)
 			await Hoidap.findByIdAndDelete(id)
-			let products = await Hoidap.find()
-			res.render('taikhoan/thaytro_admin', {
-				products: products
-			})
+			res.redirect('/tt/admintt')
+
 		}
 		catch (err) {
 			next(err)
@@ -168,10 +198,20 @@ const Service = {
 			const body = req.params, id = body.id
 			console.log(id)
 			await lichgapmat.findByIdAndDelete(id)
-			let products = await lichgapmat.find()
-			res.render('taikhoan/lichhen_admin', {
-				products: products
-			})
+			res.redirect('/lh/adminlh')
+
+		}
+		catch (err) {
+			next(err)
+		}
+	},
+	deletepq: async (req, res, next) => {
+		try {
+			const body = req.params, id = body.id
+			console.log(id)
+			await user.findByIdAndDelete(id)
+			res.redirect('/pq/adminpq')
+
 		}
 		catch (err) {
 			next(err)

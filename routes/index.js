@@ -39,5 +39,9 @@ router.use('/chitietlichhen', mid.requiresLogin, lichhenRouter)
 router.use('/kkdn', mid.requiresLogin, taikhoanRouter)
 router.use('/lh', mid.requiresLogin, taikhoanRouter)
 router.use('/tt', mid.requiresLogin, taikhoanRouter)
+router.use('/cmt', mid.requiresLogin, chitietketnoidammeRouter)
+router.use('/pq', mid.requiresLogin, taikhoanRouter)
+
+
 
 module.exports = router;

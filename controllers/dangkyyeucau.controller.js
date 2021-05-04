@@ -9,7 +9,7 @@ const hoidap = mongoose.model('hoidap');
 
 
 
-const insertUc = async (tieude, ghichu, noidung,chude) => {
+const insertUc = async (tieude, ghichu, noidung,chude,userid) => {
   console.log(chude);
   if(chude=="ketnoidamme"){
     try {
@@ -17,6 +17,7 @@ const insertUc = async (tieude, ghichu, noidung,chude) => {
       newProduct.tieude = tieude;
       newProduct.ghichu = ghichu;
       newProduct.noidung = noidung;   
+      newProduct.userid = userid;   
       await newProduct.save();
   } catch(error) {
       // console.log(error);
@@ -30,7 +31,8 @@ const insertUc = async (tieude, ghichu, noidung,chude) => {
       const newProduct_kkdn = new Product_kkdn();
       newProduct_kkdn.tieude = tieude;
       newProduct_kkdn.ghichu = ghichu;
-      newProduct_kkdn.noidung = noidung;   
+      newProduct_kkdn.noidung = noidung; 
+      newProduct_kkdn.userid = userid;     
       await newProduct_kkdn.save();
   } catch(error) {
       // console.log(error);
@@ -44,7 +46,8 @@ const insertUc = async (tieude, ghichu, noidung,chude) => {
       const newhoidap = new hoidap();
       newhoidap.tieude = tieude;
       newhoidap.ghichu = ghichu;
-      newhoidap.noidung = noidung;   
+      newhoidap.noidung = noidung;
+      newhoidap.userid = userid;      
       await newhoidap.save();
   } catch(error) {
       // console.log(error);
@@ -61,13 +64,13 @@ module.exports.index = function(req, res) {
   res.render('dangkyyeucau/index');
 };
 module.exports.create=  async function(req, res){
-  let userId = req.session.userId;
-  console.log(userId);
+  let userid = req.session.userId;
+  // console.log(userId);
   try {
     let {tieude, ghichu, noidung,chude} = req.body;
-    console.log(tieude);
-      await insertUc(tieude, ghichu, noidung,chude);
-      res.redirect('/yeu-cau');
+    console.log(chude);
+      await insertUc(tieude, ghichu, noidung,chude,userid);
+      res.redirect('/');
   } catch(error) {
     console.log(error);
     res.render('dangkyyeucau/index', {
