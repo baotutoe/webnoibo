@@ -135,13 +135,9 @@ const Service = {
 			let quyen = []
 			if(admin){
 				quyen.push(admin)
-				console.log(quyen)
-
 			}
 			if(giaovien){
 				quyen.push(giaovien)
-				console.log(quyen)
-
 			}
 			if(hocsinh){
 				quyen.push(hocsinh)
@@ -149,8 +145,8 @@ const Service = {
 			await user.findByIdAndUpdate(id, {
 				name: hoten,
 				email: email,
-				quyen: quyen,
-				trangthai:trangthai
+				roles: quyen,
+				status:trangthai
 			})
 			res.redirect('/pq/adminpq')
 		}

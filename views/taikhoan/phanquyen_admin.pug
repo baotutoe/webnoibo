@@ -199,8 +199,8 @@ html(lang="en")
                         tr.tr-shadow
                           td= user.name
                           td= user.email
-                          td Admin
-                          td block
+                          td= user.roles
+                          td= user.status
                           td
                             .table-data-feature
                               a.item(class="login-window button" onClick='edit(\"'+user.id+'\")' data-toggle="tooltip" data-placement="top" title="Edit")
@@ -251,13 +251,13 @@ html(lang="en")
                   .col.col-md-3
                     label.form-control-label(for="Quyền") Quyền
                   .col-12.col-md-9
-                    input#vehicle1(type='checkbox' name='vehicle1' value='admin')
+                    input#vehicle1(type='checkbox' name='vehicle1' value='ADMIN' checked=user.roles.includes("ADMIN") ? "true" : null)
                     label(for='vehicle1') Admin
                     br
-                    input#vehicle2(type='checkbox' name='vehicle2' value='giaovien')
+                    input#vehicle2(type='checkbox' name='vehicle2' value='TEACHER' checked=user.roles.includes("TEACHER") ? "true" : null)
                     label(for='vehicle2')  Giáo viên
                     br
-                    input#vehicle3(type='checkbox' name='vehicle3' value='hocsinh')
+                    input#vehicle3(type='checkbox' name='vehicle3' value='STUDENT' checked=user.roles.includes("STUDENT") ? "true" : null)
                     label(for='vehicle3')  Học sinh
                     br
                 .row.form-group
@@ -265,9 +265,9 @@ html(lang="en")
                     label.form-control-label(for="Trạng thái") Trạng thái
                   .col-12.col-md-9
                     select#cars(name='trangthai')
-                      option(value='duyet') Duyệt
-                      option(value='choduyet') Chờ duyệt
-                      option(value='chan') Chặn
+                      option(value='ACTIVE') Duyệt
+                      option(value='INACTIVE') Chờ duyệt
+                      option(value='BLOCK') Chặn
                 .row.form-group
                   .col.col-md-3
                     label.form-control-label(for="Mật khẩu") Mật Khẩu
