@@ -9,6 +9,7 @@ let port = 3000
 let session = require('express-session');
 let errorHandler = require('./middlewares/errorHandler')
 let routes = require('./routes/index');
+const SESSION = require('./config/session.config');
 
 // const server = require('http').createServer(app);
 // const io = require('socket.io')(server);
@@ -23,7 +24,8 @@ app.use(express.static('public'));
 app.use(session({
     secret: 'secret',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    expires: new Date(Date.now() + SESSION.expirationTime)
 }));
 
 // make user ID available in templates

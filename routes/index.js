@@ -15,6 +15,7 @@ let taikhoanRouter = require('./taikhoan.route');
 let dangkylichhenRouter = require('./dangkylichhen.route');
 let lichhenRouter = require('./lichhen.route');
 let chitietketnoidammeRouter = require('./chitietketnoidamme.route');
+let kichhoattaikhoanRouter = require('./kich-hoat-tai-khoan.route');
 
 // public
 router.use('/dangxuat', dangxuatRouter)
@@ -25,23 +26,22 @@ router.use('/dangky-t-k', mid.loggedOut, dangkytkRouter)
 
 // private
 router.use('/', trangchuRouter)
-router.use('/gioithieu', mid.requiresLogin, gioithieuRouter)
-router.use('/dangkyyeucau', mid.requiresLogin, dangkyyeucauRouter)
-router.use('/thaytro', mid.requiresLogin, thaytroRouter)
-router.use('/ketnoidamme', mid.requiresLogin, ketnoidammeRouter)
-router.use('/khoanhkhacdangnho', mid.requiresLogin, khoanhkhacdangnhoRouter)
-router.use('/taikhoan', mid.requiresLogin, taikhoanRouter)
-router.use('/dangkylichhen', mid.requiresLogin, dangkylichhenRouter)
-router.use('/lichhen', mid.requiresLogin, lichhenRouter)
-router.use('/chitietketnoidamme', mid.requiresLogin, chitietketnoidammeRouter)
-router.use('/chitietthaytro', mid.requiresLogin, thaytroRouter)
-router.use('/chitietlichhen', mid.requiresLogin, lichhenRouter)
-router.use('/kkdn', mid.requiresLogin, taikhoanRouter)
-router.use('/lh', mid.requiresLogin, taikhoanRouter)
-router.use('/tt', mid.requiresLogin, taikhoanRouter)
-router.use('/cmt', mid.requiresLogin, chitietketnoidammeRouter)
-router.use('/pq', mid.requiresLogin, taikhoanRouter)
-
-
+router.use('/gioithieu', [mid.requiresLogin, mid.requiresActive], gioithieuRouter)
+router.use('/dangkyyeucau', [mid.requiresLogin, mid.requiresActive], dangkyyeucauRouter)
+router.use('/thaytro', [mid.requiresLogin, mid.requiresActive], thaytroRouter)
+router.use('/ketnoidamme', [mid.requiresLogin, mid.requiresActive], ketnoidammeRouter)
+router.use('/khoanhkhacdangnho', [mid.requiresLogin, mid.requiresActive], khoanhkhacdangnhoRouter)
+router.use('/taikhoan', [mid.requiresLogin, mid.requiresActive], taikhoanRouter)
+router.use('/dangkylichhen', [mid.requiresLogin, mid.requiresActive], dangkylichhenRouter)
+router.use('/lichhen', [mid.requiresLogin, mid.requiresActive], lichhenRouter)
+router.use('/chitietketnoidamme', [mid.requiresLogin, mid.requiresActive], chitietketnoidammeRouter)
+router.use('/chitietthaytro', [mid.requiresLogin, mid.requiresActive], thaytroRouter)
+router.use('/chitietlichhen', [mid.requiresLogin, mid.requiresActive], lichhenRouter)
+router.use('/kkdn', [mid.requiresLogin, mid.requiresActive], taikhoanRouter)
+router.use('/lh', [mid.requiresLogin, mid.requiresActive], taikhoanRouter)
+router.use('/tt', [mid.requiresLogin, mid.requiresActive], taikhoanRouter)
+router.use('/kich-hoat-tai-khoan', [mid.requiresLogin], kichhoattaikhoanRouter)
+router.use('/cmt', [mid.requiresLogin, mid.requiresActive], chitietketnoidammeRouter)
+router.use('/pq', [mid.requiresLogin, mid.requiresActive], taikhoanRouter)
 
 module.exports = router;
