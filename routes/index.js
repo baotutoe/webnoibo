@@ -11,7 +11,11 @@ let thaytroRouter = require('./thaytro.route');
 let dangxuatRouter = require('./dangxuat.route');
 let ketnoidammeRouter = require('./ketnoidamme.route');
 let khoanhkhacdangnhoRouter = require('./khoanhkhacdangnho.route');
+
 let taikhoanRouter = require('./taikhoan.route');
+let taikhoanhsRouter = require('./taikhoanhs.route');
+let taikhoangvRouter = require('./taikhoangv.route');
+
 let dangkylichhenRouter = require('./dangkylichhen.route');
 let lichhenRouter = require('./lichhen.route');
 let chitietketnoidammeRouter = require('./chitietketnoidamme.route');
@@ -31,7 +35,11 @@ router.use('/dangkyyeucau', [mid.requiresLogin, mid.requiresActive], dangkyyeuca
 router.use('/thaytro', [mid.requiresLogin, mid.requiresActive], thaytroRouter)
 router.use('/ketnoidamme', [mid.requiresLogin, mid.requiresActive], ketnoidammeRouter)
 router.use('/khoanhkhacdangnho', [mid.requiresLogin, mid.requiresActive], khoanhkhacdangnhoRouter)
-router.use('/taikhoan', [mid.requiresLogin, mid.requiresActive], taikhoanRouter)
+
+router.use('/taikhoan', [mid.requiresLogin, mid.requiresActive, mid.requiresAdmin], taikhoanRouter)
+router.use('/taikhoangv', [mid.requiresLogin, mid.requiresActive, mid.requiresTeacher], taikhoangvRouter)
+router.use('/taikhoanhs', [mid.requiresLogin, mid.requiresActive, mid.requiresStudent], taikhoanhsRouter)
+
 router.use('/dangkylichhen', [mid.requiresLogin, mid.requiresActive], dangkylichhenRouter)
 router.use('/lichhen', [mid.requiresLogin, mid.requiresActive], lichhenRouter)
 router.use('/chitietketnoidamme', [mid.requiresLogin, mid.requiresActive], chitietketnoidammeRouter)
